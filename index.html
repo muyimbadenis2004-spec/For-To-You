@@ -1,0 +1,1769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="For To You Computers & Laptops - computers, laptops, gaming PCs, monitors and accessories in Kampala, Uganda.">
+  <title>For To You | Computers & Laptops Center - Kampala, Uganda</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    /* ----- RESET & BASE ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fc;
+      color: #1a2639;
+      line-height: 1.6;
+      font-size: 1.05rem;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+    .hidden { display: none !important; }
+
+    /* ----- TOPBAR ----- */
+    .topbar {
+      background: #0b1a2e;
+      color: #cdd9e9;
+      font-size: 0.9rem;
+      padding: 0.5rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      border-bottom: 1px solid #2a3f5a;
+    }
+    .toplinks span { margin-left: 1.5rem; }
+
+    .one-page-banner {
+      background: #d4e2f7;
+      color: #0b1a2e;
+      text-align: center;
+      padding: 0.6rem 1rem;
+      font-size: 1rem;
+      font-weight: 500;
+      border-bottom: 1px solid #b0c8e0;
+    }
+
+    /* ----- HEADER ----- */
+    .header {
+      background: #ffffff;
+      padding: 0.9rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #e2eaf3;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-weight: 700;
+      font-size: 1.6rem;
+    }
+    .logo-mark { font-size: 2rem; }
+    .logo small {
+      display: block;
+      font-weight: 400;
+      font-size: 0.7rem;
+      color: #3e5d7e;
+      letter-spacing: 0.5px;
+    }
+    .menu-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      cursor: pointer;
+      display: none;
+      color: #0b1a2e;
+      transition: color 0.3s;
+    }
+    .menu-btn:hover { color: #1d4e7a; }
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem 1.2rem;
+      align-items: center;
+    }
+    nav a {
+      font-weight: 500;
+      font-size: 1rem;
+      color: #1f3a57;
+      padding: 0.3rem 0;
+      border-bottom: 2px solid transparent;
+      transition: all 0.3s ease;
+    }
+    nav a:hover { 
+      border-bottom-color: #1d4e7a; 
+      color: #0b1a2e;
+      transform: translateY(-1px);
+    }
+    .nav-cta {
+      background: #1d4e7a;
+      color: white !important;
+      padding: 0.6rem 1.6rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      transition: all 0.3s ease;
+    }
+    .nav-cta:hover { 
+      background: #0f3a5c;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(29, 78, 122, 0.3);
+    }
+
+    /* ----- HERO ----- */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3rem 2rem 2.5rem;
+      background: linear-gradient(145deg, #f0f6fe, #ffffff);
+      gap: 2rem;
+    }
+    .hero-copy { flex: 1 1 380px; }
+    .hero-copy h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0.5rem 0 0.8rem;
+    }
+    .hero-copy h1 span { color: #1d4e7a; }
+    .eyebrow {
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      color: #2a6b9e;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0 1.2rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 2rem;
+      border-radius: 40px;
+      font-weight: 600;
+      font-size: 1.05rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background: #eef3f9;
+      color: #1a2639;
+    }
+    .btn.primary {
+      background: #1d4e7a;
+      color: white;
+    }
+    .btn.primary:hover { 
+      background: #0f3a5c;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(29, 78, 122, 0.35);
+    }
+    .btn.ghost {
+      background: transparent;
+      border: 2px solid #1d4e7a;
+      color: #1d4e7a;
+    }
+    .btn.ghost:hover { 
+      background: #1d4e7a;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(29, 78, 122, 0.25);
+    }
+    .btn.dark {
+      background: #0b1a2e;
+      color: white;
+    }
+    .btn.dark:hover { 
+      background: #1a2f47;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(11, 26, 46, 0.3);
+    }
+    .btn.full { width: 100%; text-align: center; }
+    .trust-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.5rem;
+      font-size: 1rem;
+      color: #1f3a57;
+    }
+    .hero-visual { flex: 1 1 260px; }
+    .hero-card {
+      background: #ffffff;
+      padding: 1.5rem 1rem;
+      border-radius: 28px;
+      box-shadow: 0 12px 28px rgba(0,20,40,0.08);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hero-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(0,20,40,0.12);
+    }
+    .hero-card img {
+      max-height: 180px;
+      margin: 0 auto;
+      border-radius: 12px;
+      background: #dce6f2;
+      width: 100%;
+      object-fit: contain;
+    }
+    .sale {
+      display: inline-block;
+      background: #c44536;
+      color: white;
+      padding: 0.2rem 1.2rem;
+      border-radius: 30px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+      margin-bottom: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+    .sale:hover { transform: scale(1.05); }
+
+    /* ----- SECTIONS ----- */
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .section.alt { background: #eaf0f8; border-radius: 40px 40px 0 0; }
+    .section-heading {
+      margin-bottom: 2.5rem;
+    }
+    .section-heading h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0.2rem 0 0.5rem;
+    }
+    .section-heading p { 
+      color: #2f4a67; 
+      max-width: 600px;
+      font-size: 1.05rem;
+    }
+    .split {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 1.5rem;
+    }
+    .product-tools { 
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    .site-search {
+      padding: 0.7rem 1.2rem;
+      border-radius: 30px;
+      border: 1px solid #cbd8e8;
+      background: white;
+      min-width: 220px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .site-search:focus {
+      outline: none;
+      border-color: #1d4e7a;
+      box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.15);
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+    .filter {
+      background: transparent;
+      border: 1px solid #b3c9df;
+      padding: 0.4rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+    .filter:hover { 
+      background: #dce6f2;
+      transform: translateY(-2px);
+    }
+    .filter.active {
+      background: #1d4e7a;
+      border-color: #1d4e7a;
+      color: white;
+    }
+    .filter.active:hover {
+      background: #0f3a5c;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(29, 78, 122, 0.3);
+    }
+
+    /* ----- PRODUCT GRID ----- */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .product {
+      background: white;
+      border-radius: 24px;
+      padding: 1.4rem 1.2rem 1.6rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      transition: all 0.3s ease;
+      border: 1px solid #e2ebf5;
+      display: flex;
+      flex-direction: column;
+    }
+    .product:hover { 
+      box-shadow: 0 12px 28px rgba(0,20,40,0.08);
+      transform: translateY(-4px);
+      border-color: #b3c9df;
+    }
+    .product-image {
+      height: 150px;
+      background: #f0f5fc;
+      border-radius: 16px;
+      overflow: hidden;
+      margin-bottom: 0.8rem;
+      transition: transform 0.3s ease;
+    }
+    .product:hover .product-image { transform: scale(1.02); }
+    .product-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .tag {
+      background: #d4e2f7;
+      padding: 0.1rem 0.8rem;
+      border-radius: 30px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #1d4e7a;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      align-self: flex-start;
+      transition: background 0.3s ease;
+    }
+    .product:hover .tag { background: #b8cfe7; }
+    .product h3 { font-size: 1.2rem; margin-bottom: 0.2rem; }
+    .product p { font-size: 0.95rem; color: #3a5776; margin: 0.3rem 0; flex:1; }
+    .price { 
+      font-weight: 700;
+      color: #0b1a2e;
+      font-size: 1.2rem;
+      margin: 0.6rem 0 0.7rem;
+    }
+    .small-btn {
+      background: #eaf0f8;
+      border: none;
+      padding: 0.4rem 1.2rem;
+      border-radius: 30px;
+      font-weight: 500;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-right: 0.3rem;
+    }
+    .small-btn:hover { 
+      background: #1d4e7a;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(29, 78, 122, 0.25);
+    }
+    .note { font-size: 0.9rem; color: #4b6a8a; margin-top: 1rem; }
+
+    /* ----- VIDEOS ----- */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+      gap: 2rem;
+    }
+    .video-card {
+      background: white;
+      border-radius: 24px;
+      padding: 1.2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+      border: 1px solid #e2ebf5;
+      transition: all 0.3s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(0,20,40,0.08);
+      border-color: #b3c9df;
+    }
+    .video-frame {
+      aspect-ratio: 16/9;
+      background: #0b1a2e;
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .video-frame iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .video-card h3 { margin: 0.8rem 0 0.2rem; font-size: 1.1rem; }
+    .video-card p { font-size: 0.95rem; color: #2f4a67; }
+
+    /* ----- ORDER / QUESTIONS ----- */
+    .order-section {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      background: #ffffff;
+      border-radius: 40px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+      transition: box-shadow 0.3s ease;
+    }
+    .order-section:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.04); }
+    .order-intro { flex: 1 1 280px; }
+    .order-intro ul { margin: 1rem 0 0; list-style: none; font-size: 1rem; }
+    .order-intro li { margin: 0.4rem 0; }
+    .form-card {
+      flex: 2 1 400px;
+      background: #f7faff;
+      padding: 2rem;
+      border-radius: 30px;
+      border: 1px solid #dce6f2;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    .form-card:hover { border-color: #b3c9df; }
+    .form-card label {
+      display: block;
+      font-weight: 500;
+      margin: 1rem 0 0.2rem;
+      font-size: 1rem;
+    }
+    .form-card input, .form-card select, .form-card textarea {
+      width: 100%;
+      padding: 0.8rem 1.2rem;
+      border-radius: 30px;
+      border: 1px solid #cdddee;
+      background: white;
+      font-family: inherit;
+      font-size: 1rem;
+      margin-top: 0.2rem;
+      transition: all 0.3s ease;
+    }
+    .form-card input:focus, .form-card select:focus, .form-card textarea:focus {
+      outline: none;
+      border-color: #1d4e7a;
+      box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.12);
+    }
+    .form-card textarea { border-radius: 20px; resize: vertical; }
+    .form-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .form-row label { flex: 1 1 160px; }
+    .form-status { margin-top: 0.8rem; font-weight: 500; color: #1d4e7a; font-size: 1rem; }
+
+    /* ----- QUESTIONS SECTION WITH CHATBOT ----- */
+    .questions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2.5rem;
+      padding: 2.5rem;
+      background: #eaf0f8;
+      border-radius: 40px;
+      margin-top: 2rem;
+    }
+    .question-copy { flex: 1 1 280px; }
+    .faq details {
+      background: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px;
+      margin: 0.6rem 0;
+      border: 1px solid #d4e2f7;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .faq details:hover { border-color: #b3c9df; }
+    .faq summary { 
+      font-weight: 600; 
+      cursor: pointer; 
+      font-size: 1.05rem;
+      transition: color 0.3s ease;
+    }
+    .faq summary:hover { color: #1d4e7a; }
+    .faq p { margin-top: 0.5rem; color: #1f3a57; }
+
+    /* Chatbot styles */
+    .chatbot-container {
+      flex: 2 1 400px;
+      background: white;
+      border-radius: 30px;
+      border: 1px solid #dce6f2;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      max-height: 550px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+      transition: all 0.3s ease;
+    }
+    .chatbot-container:hover { border-color: #b3c9df; }
+    .chat-header {
+      background: #1d4e7a;
+      color: white;
+      padding: 1rem 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .chat-header .bot-avatar {
+      width: 40px;
+      height: 40px;
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+    }
+    .chat-header h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .chat-header small {
+      font-size: 0.75rem;
+      opacity: 0.8;
+      display: block;
+    }
+    .chat-messages {
+      flex: 1;
+      padding: 1.2rem 1.5rem;
+      overflow-y: auto;
+      max-height: 280px;
+      background: #f8faff;
+    }
+    .chat-message {
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+    }
+    .chat-message.bot {
+      justify-content: flex-start;
+    }
+    .chat-message.user {
+      justify-content: flex-end;
+    }
+    .chat-message .bubble {
+      max-width: 80%;
+      padding: 0.7rem 1.2rem;
+      border-radius: 18px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      word-wrap: break-word;
+    }
+    .chat-message.bot .bubble {
+      background: #eaf0f8;
+      color: #1a2639;
+      border-bottom-left-radius: 4px;
+    }
+    .chat-message.user .bubble {
+      background: #1d4e7a;
+      color: white;
+      border-bottom-right-radius: 4px;
+    }
+    .chat-message .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+    .chat-message.bot .avatar {
+      background: #1d4e7a;
+      color: white;
+    }
+    .chat-message.user .avatar {
+      background: #0b1a2e;
+      color: white;
+      order: 1;
+    }
+    .typing-indicator {
+      display: none;
+      padding: 0.5rem 1.2rem;
+      background: #eaf0f8;
+      border-radius: 18px;
+      border-bottom-left-radius: 4px;
+      width: fit-content;
+      font-size: 0.9rem;
+      color: #4b6a8a;
+    }
+    .typing-indicator.active { display: block; }
+    .typing-indicator span {
+      display: inline-block;
+      animation: dotPulse 1.4s infinite both;
+    }
+    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
+    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes dotPulse {
+      0%, 80%, 100% { opacity: 0; transform: scale(0.8); }
+      40% { opacity: 1; transform: scale(1); }
+    }
+    .chat-input-area {
+      display: flex;
+      padding: 0.8rem 1.2rem;
+      gap: 0.6rem;
+      border-top: 1px solid #e2ebf5;
+      background: white;
+    }
+    .chat-input-area input {
+      flex: 1;
+      padding: 0.7rem 1.2rem;
+      border-radius: 30px;
+      border: 1px solid #cdddee;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      background: #f7faff;
+    }
+    .chat-input-area input:focus {
+      outline: none;
+      border-color: #1d4e7a;
+      box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.12);
+    }
+    .chat-input-area .send-btn {
+      background: #1d4e7a;
+      color: white;
+      border: none;
+      padding: 0.7rem 1.4rem;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+    }
+    .chat-input-area .send-btn:hover {
+      background: #0f3a5c;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(29, 78, 122, 0.25);
+    }
+    .chat-input-area .send-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+
+    /* ----- ACCOUNT ----- */
+    .account-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .account-grid .form-card { flex: 1 1 340px; }
+    .account-panel {
+      flex: 1 1 280px;
+      background: white;
+      padding: 1.5rem;
+      border-radius: 30px;
+      border: 1px solid #dce6f2;
+      transition: all 0.3s ease;
+    }
+    .account-panel:hover { border-color: #b3c9df; }
+    .account-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* ----- MODALS ----- */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.3);
+      backdrop-filter: blur(3px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 200;
+      animation: fadeIn 0.3s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .modal-overlay.hidden { display: none; }
+    .customer-modal {
+      background: white;
+      max-width: 620px;
+      width: 94%;
+      border-radius: 32px;
+      padding: 2.2rem;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+      animation: slideUp 0.3s ease;
+    }
+    @keyframes slideUp {
+      from { transform: translateY(30px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    .modal-close {
+      position: absolute;
+      top: 0.8rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      font-size: 2.4rem;
+      cursor: pointer;
+      color: #2f4a67;
+      transition: all 0.3s ease;
+    }
+    .modal-close:hover { 
+      color: #c44536;
+      transform: rotate(90deg);
+    }
+    .product-detail-modal { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+    .product-detail-modal img { 
+      flex: 1 1 180px; 
+      border-radius: 20px; 
+      background: #eef3f9;
+      transition: transform 0.3s ease;
+    }
+    .product-detail-modal img:hover { transform: scale(1.02); }
+    .product-detail-modal > div { flex: 2 1 220px; }
+    .product-detail-modal h2 { font-size: 1.6rem; }
+    .product-detail-modal p { font-size: 1rem; }
+    .spec-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.3rem 0.8rem;
+      background: #f7faff;
+      padding: 0.8rem;
+      border-radius: 20px;
+      margin: 0.8rem 0;
+      font-size: 0.95rem;
+    }
+    .checkout-modal .payment-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+      margin: 0.8rem 0;
+    }
+    .pay-option {
+      background: #f0f6fe;
+      border-radius: 40px;
+      padding: 0.5rem 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      border: 1px solid transparent;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+    .pay-option:hover { 
+      border-color: #1d4e7a;
+      background: #e2ebf5;
+      transform: translateX(4px);
+    }
+
+    /* ----- CONTACT & FOOTER ----- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+      gap: 1.5rem;
+    }
+    .contact-card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 28px;
+      border: 1px solid #dce6f2;
+      text-align: center;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .contact-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0,20,40,0.06);
+      border-color: #b3c9df;
+    }
+    .contact-card .contact-icon {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0.5rem;
+    }
+    .contact-card .contact-icon svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .contact-card h3 { margin: 0.5rem 0; }
+    .contact-card a {
+      color: #1d4e7a;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    .contact-card a:hover { color: #0f3a5c; }
+    .contact-card small { font-size: 0.8rem; color: #6a7f98; }
+
+    /* WhatsApp contact card icon */
+    .contact-card .whatsapp-icon {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      background: #25D366;
+      border-radius: 50%;
+      padding: 10px;
+      margin-bottom: 0.5rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .contact-card .whatsapp-icon svg {
+      width: 100%;
+      height: 100%;
+      fill: white;
+      display: block;
+    }
+    .contact-card:hover .whatsapp-icon {
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+    }
+
+    footer {
+      background: #0b1a2e;
+      color: #c9d9ec;
+      padding: 2.5rem 2rem 1.5rem;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+    .footer-main {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .footer-main a { 
+      display: block; 
+      color: #b0c9e2; 
+      margin: 0.2rem 0; 
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .footer-main a:hover { 
+      color: white;
+      transform: translateX(4px);
+    }
+    .footer-logo { font-size: 2rem; font-weight: 700; color: white; }
+    .copyright {
+      text-align: center;
+      border-top: 1px solid #1f3a57;
+      padding-top: 1.2rem;
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+    }
+    .copyright a {
+      transition: color 0.3s ease;
+    }
+    .copyright a:hover { color: white; }
+
+    /* ----- WHATSAPP FLOATING BUTTON with official icon ----- */
+    .whatsapp {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: #25D366;
+      color: white;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+      z-index: 50;
+      text-decoration: none;
+    }
+    .whatsapp:hover { 
+      transform: scale(1.1) rotate(-5deg);
+      box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
+    }
+    .whatsapp svg {
+      width: 34px;
+      height: 34px;
+      fill: white;
+    }
+
+    /* ----- COUNTRY CODE SELECTOR STYLES ----- */
+    .phone-with-code {
+      display: flex;
+      gap: 0.5rem;
+      align-items: center;
+    }
+    .phone-with-code select {
+      width: auto;
+      min-width: 100px;
+      flex-shrink: 0;
+      padding: 0.8rem 0.6rem;
+      border-radius: 30px;
+      border: 1px solid #cdddee;
+      background: white;
+      font-family: inherit;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+    }
+    .phone-with-code select:focus {
+      outline: none;
+      border-color: #1d4e7a;
+      box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.12);
+    }
+    .phone-with-code input {
+      flex: 1;
+      padding: 0.8rem 1.2rem;
+      border-radius: 30px;
+      border: 1px solid #cdddee;
+      background: white;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+    .phone-with-code input:focus {
+      outline: none;
+      border-color: #1d4e7a;
+      box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.12);
+    }
+
+    /* ----- RESPONSIVE ----- */
+    @media (max-width: 800px) {
+      .topbar .toplinks span { margin-left: 0.8rem; }
+      .menu-btn { display: block; }
+      nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        padding: 0.8rem 0;
+        border-top: 1px solid #e2ebf5;
+      }
+      nav.open { display: flex; }
+      nav a { width: 100%; padding: 0.6rem 0; }
+      .nav-cta { display: none; }
+      .hero { padding: 1.5rem 1rem; }
+      .hero-copy h1 { font-size: 2.5rem; }
+      .section { padding: 1.5rem 1rem; }
+      .order-section, .questions { padding: 1.5rem 1rem; }
+      .product-grid { grid-template-columns: repeat(auto-fill, minmax(170px,1fr)); }
+      .split { flex-direction: column; align-items: stretch; }
+      .site-search { width: 100%; }
+      .account-grid { flex-direction: column; }
+      .phone-with-code { flex-direction: column; align-items: stretch; }
+      .phone-with-code select { width: 100%; }
+      .chatbot-container { max-height: 450px; }
+      .chat-messages { max-height: 200px; }
+    }
+    @media (max-width: 480px) {
+      .topbar { flex-direction: column; align-items: center; gap: 0.2rem; }
+      .trust-row { flex-direction: column; gap: 0.3rem; }
+      .hero-actions .btn { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <!-- TOPBAR -->
+  <div class="topbar">
+    <div>Kampala(U)</div>
+    <div class="toplinks">
+      <span>+256 750899569</span>
+      <span>✉ muyimbadenis2004@gmail.com</span>
+      <span>24/7 open</span>
+    </div>
+  </div>
+  <div class="one-page-banner">Everything you need — products, search, videos, accounts, checkout, questions & contact — is on this page.</div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <a class="logo" href="#home">
+      <span class="logo-mark">💻</span>
+      <span><strong><i>For</i> To You</strong><small>Computers & Laptops Center</small></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#products">Shop</a>
+      <a href="#videos">Videos</a>
+      <a href="#about">About</a>
+      <a href="#order">Order Online</a>
+      <a href="#questions">Ask a Question</a>
+      <a href="#contact">Contact</a>
+      <a href="#account">My Account</a>
+    </nav>
+    <a class="nav-cta" href="#order">Order Now</a>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="eyebrow">WELCOME TO "FOR TO YOU Computers & Laptops Center"</p>
+        <h1>Your One-Stop Shop for Computers & <span>Laptops</span></h1>
+        <p>Quality computers, laptops, gaming machines, monitors and accessories for students, offices, businesses, creators and gamers in Kampala and across Uganda.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#products">Shop Products 🛒</a>
+          <a class="btn ghost" href="#order">Order Online</a>
+        </div>
+        <div class="trust-row">
+          <span>Quality Products</span>
+          <span>Competitive Prices</span>
+          <span>Customer Support</span>
+          <span>Kampala Delivery</span>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card">
+          <span class="sale">Supper DEALS</span>
+          <img src="https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?auto=format&fit=crop&w=800&q=80" alt="For To You website and laptop concept">
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="section-heading">
+        <p class="eyebrow">ABOUT US</p>
+        <h2>Technology that works for you.</h2>
+        <p>For To You is a Kampala-based computer and laptop business focused on helping customers find the right technology for school, work, business, design, programming, gaming and everyday use.</p>
+      </div>
+      <div class="about-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.5rem;">
+        <article class="info-card" style="background:white;padding:1.5rem;border-radius:28px;border:1px solid #dce6f2;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,20,40,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div class="icon" style="font-size:2.2rem;"></div><h3>Our Mission</h3><p>Make reliable technology easier to find, understand and buy at competitive prices.</p>
+        </article>
+        <article class="info-card" style="background:white;padding:1.5rem;border-radius:28px;border:1px solid #dce6f2;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,20,40,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div class="icon" style="font-size:2.2rem;"></div><h3>Customer First</h3><p>We help customers choose equipment according to their needs and budget.</p>
+        </article>
+        <article class="info-card" style="background:white;padding:1.5rem;border-radius:28px;border:1px solid #dce6f2;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,20,40,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div class="icon" style="font-size:2.2rem;"></div><h3>Convenient Delivery</h3><p>Ask about delivery options in Kampala and other parts of Uganda.</p>
+        </article>
+        <article class="info-card" style="background:white;padding:1.5rem;border-radius:28px;border:1px solid #dce6f2;transition:all 0.3s ease;" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 8px 24px rgba(0,20,40,0.06)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'">
+          <div class="icon" style="font-size:2.2rem;"></div><h3>After-Sale Support</h3><p>Need help with your new device? Contact our team for guidance and support.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- PRODUCTS (SHOP) - single section -->
+    <section class="section alt" id="products">
+      <div class="section-heading split">
+        <div>
+          <p class="eyebrow">OUR PRODUCTS</p>
+          <h2>Find the right machine.</h2>
+          <p>Browse the categories below. Prices can be updated as your stock changes.</p>
+        </div>
+        <div class="product-tools">
+          <input id="siteProductSearch" class="site-search" type="search" placeholder="🔎 Search laptops, desktops, gaming PCs...">
+          <div class="filters" id="filters">
+            <button class="filter active" data-filter="all">All</button>
+            <button class="filter" data-filter="laptop">Laptops</button>
+            <button class="filter" data-filter="desktop">Desktops</button>
+            <button class="filter" data-filter="gaming">Gaming</button>
+            <button class="filter" data-filter="accessory">Accessories</button>
+            <button class="filter" data-filter="monitor">Monitors</button>
+          </div>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid">
+        <article class="product" data-category="laptop">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80" alt="Laptop"></div>
+          <span class="tag">Laptop</span><h3>Everyday Student Laptop</h3>
+          <p>Good for classes, browsing, Office work and programming basics.</p>
+          <strong class="price">From UGX 850,000</strong>
+          <button class="small-btn details-product" data-product="Everyday Student Laptop">Details</button>
+          <button class="small-btn order-product" data-product="Everyday Student Laptop">Order</button>
+        </article>
+        <article class="product" data-category="laptop">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1602080858428-57174f9431cf?auto=format&fit=crop&w=900&q=80" alt="Premium laptop"></div>
+          <span class="tag">Laptop</span><h3>Business Laptop</h3>
+          <p>Portable performance for professionals, offices and entrepreneurs.</p>
+          <strong class="price">From UGX 1,800,000</strong>
+          <button class="small-btn details-product" data-product="Business Laptop">Details</button>
+          <button class="small-btn order-product" data-product="Business Laptop">Order</button>
+        </article>
+        <article class="product" data-category="gaming">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=80" alt="Gaming computer"></div>
+          <span class="tag">Gaming</span><h3>Gaming PC</h3>
+          <p>High-performance desktop options for gaming, streaming and demanding applications.</p>
+          <strong class="price">From UGX 2,800,000</strong>
+          <button class="small-btn details-product" data-product="Gaming PC">Details</button>
+          <button class="small-btn order-product" data-product="Gaming PC">Order</button>
+        </article>
+        <article class="product" data-category="desktop">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=900&q=80" alt="Desktop computer"></div>
+          <span class="tag">Desktop</span><h3>Office Desktop</h3>
+          <p>Practical desktop systems for offices, shops, schools and home use.</p>
+          <strong class="price">From UGX 1,200,000</strong>
+          <button class="small-btn details-product" data-product="Office Desktop">Details</button>
+          <button class="small-btn order-product" data-product="Office Desktop">Order</button>
+        </article>
+        <article class="product" data-category="monitor">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=80" alt="Computer monitor"></div>
+          <span class="tag">Monitor</span><h3>LED Monitor</h3>
+          <p>Different sizes for office productivity, study, design and entertainment.</p>
+          <strong class="price">From UGX 450,000</strong>
+          <button class="small-btn details-product" data-product="LED Monitor">Details</button>
+          <button class="small-btn order-product" data-product="LED Monitor">Order</button>
+        </article>
+        <article class="product" data-category="accessory">
+          <div class="product-image"><img src="https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80" alt="Computer mouse and accessories"></div>
+          <span class="tag">Accessory</span><h3>Computer Accessories</h3>
+          <p>Keyboards, mice, laptop bags, headsets, cables, storage and more.</p>
+          <strong class="price">From UGX 25,000</strong>
+          <button class="small-btn details-product" data-product="Computer Accessories">Details</button>
+          <button class="small-btn order-product" data-product="Computer Accessories">Order</button>
+        </article>
+      </div>
+      <p class="note">Prices shown are starting/placeholder prices for the website demo. Replace them with your actual stock prices.</p>
+    </section>
+
+    <!-- VIDEOS - single section -->
+    <section class="video-section" id="videos" style="padding:2.5rem 2rem;max-width:1280px;margin:0 auto;">
+      <div class="section-heading">
+        <p class="eyebrow">PRODUCT VIDEOS</p>
+        <h2>See what we offer.</h2>
+        <p>Use this area for short videos showing products, new arrivals, unboxing, specifications and customer guidance.</p>
+      </div>
+      <div class="video-grid">
+        <article class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube.com/embed/hLXGESIYDMI" title="Dell Latitude 5400 Review" loading="lazy" allowfullscreen></iframe></div>
+          <h3>Dell Latitude 5400 Review</h3>
+          <p>A real product review showing the business-laptop design, ports and features.</p>
+        </article>
+        <article class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube.com/embed/RsqFZoDB4Po" title="Lenovo ThinkPad T14s Review" loading="lazy" allowfullscreen></iframe></div>
+          <h3>Lenovo ThinkPad T14s Review</h3>
+          <p>A real review covering design, ports, display, performance and battery.</p>
+        </article>
+        <article class="video-card">
+          <div class="video-frame"><iframe src="https://www.youtube.com/embed/I9t5JOJdk2w" title="HP EliteBook 840 G7 Review" loading="lazy" allowfullscreen></iframe></div>
+          <h3>HP EliteBook 840 G7 Review</h3>
+          <p>A real HP EliteBook review that can help customers understand the business-laptop category.</p>
+        </article>
+      </div>
+      <p class="note center" style="text-align:center;">These videos are embedded from YouTube. Replace them with your own shop/product videos when you have them.</p>
+    </section>
+
+    <!-- ORDER -->
+    <section class="section order-section" id="order">
+      <div class="order-intro">
+        <p class="eyebrow">ORDER ONLINE</p>
+        <h2>Tell us what you need.</h2>
+        <p>Submit your request and our team can contact you to confirm availability, specifications, price and delivery.</p>
+        <ul>
+          <li>Choose a product category</li>
+          <li>Tell us your budget or preferred specification</li>
+          <li>Add your delivery location</li>
+          <li>We confirm the final details with you</li>
+        </ul>
+      </div>
+      <form class="form-card" id="orderForm">
+        <div class="form-row">
+          <label>Full Name<input name="name" required placeholder="Your full name"></label>
+          <label>Phone Number
+            <div class="phone-with-code">
+              <select id="orderPhoneCode" name="phoneCode">
+                <option value="+256">🇺🇬 +256 (Uganda)</option>
+                <option value="+1">🇺🇸 +1 (US/CA)</option>
+                <option value="+44">🇬🇧 +44 (UK)</option>
+                <option value="+91">🇮🇳 +91 (India)</option>
+                <option value="+61">🇦🇺 +61 (Australia)</option>
+                <option value="+234">🇳🇬 +234 (Nigeria)</option>
+                <option value="+254">🇰🇪 +254 (Kenya)</option>
+                <option value="+255">🇹🇿 +255 (Tanzania)</option>
+                <option value="+27">🇿🇦 +27 (South Africa)</option>
+                <option value="+233">🇬🇭 +233 (Ghana)</option>
+                <option value="+250">🇷🇼 +250 (Rwanda)</option>
+                <option value="+211">🇸🇸 +211 (South Sudan)</option>
+                <option value="+86">🇨🇳 +86 (China)</option>
+                <option value="+81">🇯🇵 +81 (Japan)</option>
+                <option value="+49">🇩🇪 +49 (Germany)</option>
+                <option value="+33">🇫🇷 +33 (France)</option>
+                <option value="+39">🇮🇹 +39 (Italy)</option>
+                <option value="+55">🇧🇷 +55 (Brazil)</option>
+                <option value="+52">🇲🇽 +52 (Mexico)</option>
+                <option value="+7">🇷🇺 +7 (Russia)</option>
+                <option value="+63">🇵🇭 +63 (Philippines)</option>
+                <option value="+92">🇵🇰 +92 (Pakistan)</option>
+                <option value="+20">🇪🇬 +20 (Egypt)</option>
+                <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+                <option value="+971">🇦🇪 +971 (UAE)</option>
+              </select>
+              <input type="tel" name="phone" required placeholder="Phone number">
+            </div>
+          </label>
+        </div>
+        <div class="form-row">
+          <label>Email<input type="email" name="email" placeholder="you@example.com"></label>
+          <label>Product Category
+            <select name="category" required>
+              <option value="">Select category</option><option>Laptop</option><option>Desktop</option><option>Gaming</option><option>Monitor</option><option>Accessories</option>
+            </select>
+          </label>
+        </div>
+        <label>Product<input name="product" id="orderProduct" placeholder="e.g. HP Core i5, Dell Latitude, Gaming PC"></label>
+        <div class="form-row">
+          <label>Quantity<input type="number" name="quantity" min="1" value="1"></label>
+          <label>Budget (UGX)<input name="budget" placeholder="e.g. 1,500,000"></label>
+        </div>
+        <label>Delivery Location<textarea name="location" rows="2" placeholder="Kampala area or district"></textarea></label>
+        <label>Additional Requirements<textarea name="message" rows="3" placeholder="Tell us your preferred RAM, storage, screen size, processor, etc."></textarea></label>
+        <button class="btn primary full" type="submit">Submit Order Request</button>
+        <p class="form-status" id="orderStatus"></p>
+      </form>
+    </section>
+
+    <!-- QUESTIONS with AI Chatbot -->
+    <section class="questions" id="questions">
+      <div class="question-copy">
+        <p class="eyebrow">HAVE A QUESTION?</p>
+        <h2>Ask us anything about our products.</h2>
+        <p>Chat with our AI assistant for instant answers, or browse our FAQ below.</p>
+        <div class="faq">
+          <details><summary>Which laptop is best for university?</summary><p>Tell us your course, budget and software needs. We can suggest suitable specifications.</p></details>
+          <details><summary>Do you sell gaming computers?</summary><p>Yes. The gaming category can include gaming laptops, desktops, graphics cards and accessories depending on stock.</p></details>
+          <details><summary>Do you deliver?</summary><p>Contact the business with your location so delivery availability and charges can be confirmed.</p></details>
+        </div>
+      </div>
+
+      <!-- AI CHATBOT -->
+      <div class="chatbot-container">
+        <div class="chat-header">
+          <div class="bot-avatar">🤖</div>
+          <div>
+            <h3>For To You Assistant</h3>
+            <small>AI-powered • Online</small>
+          </div>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+          <div class="chat-message bot">
+            <div class="avatar">🤖</div>
+            <div class="bubble">Hello! 👋 I'm the For To You AI assistant. Ask me anything about our computers, laptops, pricing, delivery, or specifications. I'm here to help!</div>
+          </div>
+        </div>
+        <div class="typing-indicator" id="typingIndicator">
+          <span>•</span><span>•</span><span>•</span>
+        </div>
+        <div class="chat-input-area">
+          <input type="text" id="chatInput" placeholder="Type your question here..." autocomplete="off">
+          <button class="send-btn" id="sendChatBtn">Send</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACCOUNT -->
+    <section class="section account-section" id="account">
+      <div class="section-heading">
+        <p class="eyebrow">CUSTOMER ACCOUNT</p>
+        <h2>Manage your For To You account.</h2>
+        <p>Create an account to save your details and view orders made on this browser.</p>
+      </div>
+      <div class="account-grid">
+        <form id="accountForm" class="form-card">
+          <h3 id="accountTitle">Create Account</h3>
+          <label>Full Name<input id="accountName" required placeholder="Your full name"></label>
+          <label>Email<input id="accountEmail" type="email" required placeholder="you@example.com"></label>
+          <label>Phone
+            <div class="phone-with-code">
+              <select id="accountPhoneCode" name="phoneCode">
+                <option value="+256">🇺🇬 +256 (Uganda)</option>
+                <option value="+1">🇺🇸 +1 (US/CA)</option>
+                <option value="+44">🇬🇧 +44 (UK)</option>
+                <option value="+91">🇮🇳 +91 (India)</option>
+                <option value="+61">🇦🇺 +61 (Australia)</option>
+                <option value="+234">🇳🇬 +234 (Nigeria)</option>
+                <option value="+254">🇰🇪 +254 (Kenya)</option>
+                <option value="+255">🇹🇿 +255 (Tanzania)</option>
+                <option value="+27">🇿🇦 +27 (South Africa)</option>
+                <option value="+233">🇬🇭 +233 (Ghana)</option>
+                <option value="+250">🇷🇼 +250 (Rwanda)</option>
+                <option value="+211">🇸🇸 +211 (South Sudan)</option>
+                <option value="+86">🇨🇳 +86 (China)</option>
+                <option value="+81">🇯🇵 +81 (Japan)</option>
+                <option value="+49">🇩🇪 +49 (Germany)</option>
+                <option value="+33">🇫🇷 +33 (France)</option>
+                <option value="+39">🇮🇹 +39 (Italy)</option>
+                <option value="+55">🇧🇷 +55 (Brazil)</option>
+                <option value="+52">🇲🇽 +52 (Mexico)</option>
+                <option value="+7">🇷🇺 +7 (Russia)</option>
+                <option value="+63">🇵🇭 +63 (Philippines)</option>
+                <option value="+92">🇵🇰 +92 (Pakistan)</option>
+                <option value="+20">🇪🇬 +20 (Egypt)</option>
+                <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+                <option value="+971">🇦🇪 +971 (UAE)</option>
+              </select>
+              <input id="accountPhone" type="tel" required placeholder="Phone number">
+            </div>
+          </label>
+          <label>Password<input id="accountPassword" type="password" required placeholder="Create a password"></label>
+          <button class="btn primary full">Save Account</button>
+          <p id="accountStatus" class="form-status"></p>
+        </form>
+        <div class="account-panel">
+          <div class="account-header"><h3>My Orders</h3><button id="accountLogout" class="small-btn">Log Out</button></div>
+          <div id="accountOrders"><p>Sign in to see your orders.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODALS -->
+    <div class="modal-overlay hidden" id="productDetailsModal">
+      <div class="customer-modal product-detail-modal">
+        <button class="modal-close" data-close="productDetailsModal">×</button>
+        <img id="detailImage" src="" alt="">
+        <div>
+          <span id="detailCategory" class="tag"></span>
+          <h2 id="detailName"></h2>
+          <p id="detailDescription"></p>
+          <div id="detailSpecs" class="spec-grid"></div>
+          <strong id="detailPrice" class="price"></strong>
+          <button id="detailOrder" class="btn primary">Order This Product</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="checkoutModal">
+      <div class="customer-modal checkout-modal">
+        <button class="modal-close" data-close="checkoutModal">×</button>
+        <p class="eyebrow">CHECKOUT</p>
+        <h2>Choose a payment option</h2>
+        <div id="checkoutProduct" class="checkout-product"></div>
+        <form id="checkoutForm">
+          <label>Full Name<input id="checkoutName" required></label>
+          <label>Phone Number
+            <div class="phone-with-code">
+              <select id="checkoutPhoneCode" name="phoneCode">
+                <option value="+256">🇺🇬 +256 (Uganda)</option>
+                <option value="+1">🇺🇸 +1 (US/CA)</option>
+                <option value="+44">🇬🇧 +44 (UK)</option>
+                <option value="+91">🇮🇳 +91 (India)</option>
+                <option value="+61">🇦🇺 +61 (Australia)</option>
+                <option value="+234">🇳🇬 +234 (Nigeria)</option>
+                <option value="+254">🇰🇪 +254 (Kenya)</option>
+                <option value="+255">🇹🇿 +255 (Tanzania)</option>
+                <option value="+27">🇿🇦 +27 (South Africa)</option>
+                <option value="+233">🇬🇭 +233 (Ghana)</option>
+                <option value="+250">🇷🇼 +250 (Rwanda)</option>
+                <option value="+211">🇸🇸 +211 (South Sudan)</option>
+                <option value="+86">🇨🇳 +86 (China)</option>
+                <option value="+81">🇯🇵 +81 (Japan)</option>
+                <option value="+49">🇩🇪 +49 (Germany)</option>
+                <option value="+33">🇫🇷 +33 (France)</option>
+                <option value="+39">🇮🇹 +39 (Italy)</option>
+                <option value="+55">🇧🇷 +55 (Brazil)</option>
+                <option value="+52">🇲🇽 +52 (Mexico)</option>
+                <option value="+7">🇷🇺 +7 (Russia)</option>
+                <option value="+63">🇵🇭 +63 (Philippines)</option>
+                <option value="+92">🇵🇰 +92 (Pakistan)</option>
+                <option value="+20">🇪🇬 +20 (Egypt)</option>
+                <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+                <option value="+971">🇦🇪 +971 (UAE)</option>
+              </select>
+              <input id="checkoutPhone" type="tel" required placeholder="Phone number">
+            </div>
+          </label>
+          <label>Email<input id="checkoutEmail" type="email" required></label>
+          <label>Delivery Location<input id="checkoutLocation" required placeholder="Kampala / District"></label>
+          <div class="payment-options">
+            <label class="pay-option"><input type="radio" name="payment" value="MTN Mobile Money" checked><span>MTN Mobile Money</span></label>
+            <label class="pay-option"><input type="radio" name="payment" value="Airtel Money"><span>Airtel Money</span></label>
+            <label class="pay-option"><input type="radio" name="payment" value="Visa / Mastercard"><span>Visa / Mastercard</span></label>
+            <label class="pay-option"><input type="radio" name="payment" value="Bank Transfer"><span>Bank Transfer</span></label>
+            <label class="pay-option"><input type="radio" name="payment" value="Cash on Delivery"><span>Cash on Delivery</span></label>
+          </div>
+          <button class="btn primary full">Continue to Payment</button>
+          <p id="paymentStatus" class="form-status"></p>
+        </form>
+      </div>
+    </div>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="section-heading">
+        <p class="eyebrow">CONTACT US</p>
+        <h2>Let's get you the right computer.</h2>
+      </div>
+      <div class="contact-grid">
+        <!-- Location -->
+        <div class="contact-card">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1d4e7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+              <circle cx="12" cy="10" r="3"/>
+            </svg>
+          </span>
+          <h3>Location</h3>
+          <p>Kampala, Uganda</p>
+          <small>Update with the exact shop address.</small>
+        </div>
+        <!-- Phone -->
+        <div class="contact-card">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1d4e7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+          </span>
+          <h3>Phone</h3>
+          <p>+256 750899569</p>
+          <small>Business contact (Uganda)</small>
+        </div>
+        <!-- Email -->
+        <div class="contact-card">
+          <span class="contact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#1d4e7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </span>
+          <h3>Email</h3>
+          <p>muyimbadenis2004@gmail.com</p>
+          <small>Business email</small>
+        </div>
+        <!-- WhatsApp -->
+        <div class="contact-card">
+          <span class="whatsapp-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </span>
+          <h3>WhatsApp</h3>
+          <p>Chat with us</p>
+          <a href="https://wa.me/256750899569" target="_blank" rel="noopener">Open WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-main">
+      <div><div class="footer-logo">For To You</div><p>Computers, laptops, gaming systems and accessories in Kampala, Uganda.</p></div>
+      <div><h4>Quick Links</h4><a href="#products">Products</a><a href="#order">Order Online</a><a href="#questions">Ask a Question</a></div>
+      <div><h4>Categories</h4><a href="#products">Laptops</a><a href="#products">Desktops</a><a href="#products">Gaming</a><a href="#products">Accessories</a></div>
+      <div><h4>Business Hours</h4><p>24/7 Open</p></div>
+    </div>
+    <div class="copyright">© For To You Computers & Laptops Center. All rights reserved. · <a href="admin.html" style="color:#aab5c7">Admin Dashboard</a></div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON with official icon -->
+  <a class="whatsapp" href="https://wa.me/256750899569" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script>
+    (function() {
+      // ===== MENU TOGGLE =====
+      document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mainNav').classList.toggle('open');
+      });
+
+      // ===== PRODUCT FILTER & SEARCH =====
+      const productGrid = document.getElementById('productGrid');
+      const products = productGrid.querySelectorAll('.product');
+      const filters = document.querySelectorAll('.filter');
+      const search = document.getElementById('siteProductSearch');
+
+      function filterProducts() {
+        const active = document.querySelector('.filter.active')?.dataset?.filter || 'all';
+        const q = search.value.toLowerCase().trim();
+        products.forEach(p => {
+          const cat = p.dataset.category;
+          const text = p.textContent.toLowerCase();
+          const matchCat = active === 'all' || cat === active;
+          const matchSearch = text.includes(q);
+          p.style.display = (matchCat && matchSearch) ? '' : 'none';
+        });
+      }
+
+      filters.forEach(btn => {
+        btn.addEventListener('click', function() {
+          filters.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+          filterProducts();
+        });
+      });
+      search.addEventListener('input', filterProducts);
+
+      // ===== PRODUCT DATA =====
+      const productData = {
+        'Everyday Student Laptop': { cat:'Laptop', desc:'Ideal for students: Intel Core i3, 8GB RAM, 256GB SSD, 14" HD display.', price:'UGX 850,000', img:'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80', specs:['Processor: Intel i3','RAM: 8GB','Storage: 256GB SSD','Screen: 14" HD'] },
+        'Business Laptop': { cat:'Laptop', desc:'Premium business laptop with Intel Core i5, 16GB RAM, 512GB SSD, 14" FHD.', price:'UGX 1,800,000', img:'https://images.unsplash.com/photo-1602080858428-57174f9431cf?auto=format&fit=crop&w=900&q=80', specs:['Processor: Intel i5','RAM: 16GB','Storage: 512GB SSD','Screen: 14" FHD'] },
+        'Gaming PC': { cat:'Gaming', desc:'High-performance gaming desktop: Intel i7, RTX 3060, 16GB RAM, 1TB SSD.', price:'UGX 2,800,000', img:'https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=900&q=80', specs:['Processor: Intel i7','GPU: RTX 3060','RAM: 16GB','Storage: 1TB SSD'] },
+        'Office Desktop': { cat:'Desktop', desc:'Reliable office desktop: Intel Core i5, 8GB RAM, 512GB SSD, 21.5" monitor.', price:'UGX 1,200,000', img:'https://images.unsplash.com/photo-1547082299-de196ea013d6?auto=format&fit=crop&w=900&q=80', specs:['Processor: Intel i5','RAM: 8GB','Storage: 512GB SSD','Monitor: 21.5"'] },
+        'LED Monitor': { cat:'Monitor', desc:'24" Full HD LED monitor, 75Hz, VESA mount, ideal for work and entertainment.', price:'UGX 450,000', img:'https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=900&q=80', specs:['Size: 24"','Resolution: FHD','Refresh: 75Hz','Ports: HDMI, DP'] },
+        'Computer Accessories': { cat:'Accessory', desc:'Keyboards, mice, bags, headsets, USB hubs, cables, external storage.', price:'From UGX 25,000', img:'https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80', specs:['Variety of accessories','Gaming & office','USB-C hubs','External drives'] }
+      };
+
+      // ===== PRODUCT DETAILS MODAL =====
+      const detailModal = document.getElementById('productDetailsModal');
+      const detailName = document.getElementById('detailName');
+      const detailCategory = document.getElementById('detailCategory');
+      const detailDescription = document.getElementById('detailDescription');
+      const detailPrice = document.getElementById('detailPrice');
+      const detailImage = document.getElementById('detailImage');
+      const detailSpecs = document.getElementById('detailSpecs');
+      const detailOrderBtn = document.getElementById('detailOrder');
+
+      document.querySelectorAll('.details-product').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const name = this.dataset.product;
+          const data = productData[name];
+          if (!data) return;
+          detailName.textContent = name;
+          detailCategory.textContent = data.cat;
+          detailDescription.textContent = data.desc;
+          detailPrice.textContent = data.price;
+          detailImage.src = data.img;
+          detailSpecs.innerHTML = data.specs.map(s => `<span>${s}</span>`).join('');
+          detailOrderBtn.dataset.product = name;
+          detailModal.classList.remove('hidden');
+        });
+      });
+
+      document.querySelectorAll('[data-close]').forEach(btn => {
+        btn.addEventListener('click', function() {
+          document.getElementById(this.dataset.close).classList.add('hidden');
+        });
+      });
+      detailModal.addEventListener('click', function(e) { if (e.target === this) this.classList.add('hidden'); });
+
+      detailOrderBtn.addEventListener('click', function() {
+        const name = this.dataset.product;
+        document.getElementById('orderProduct').value = name;
+        document.getElementById('productDetailsModal').classList.add('hidden');
+        document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+      });
+
+      // ===== ORDER PRODUCT BUTTONS =====
+      document.querySelectorAll('.order-product').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const name = this.dataset.product;
+          document.getElementById('orderProduct').value = name;
+          document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // ===== ORDER FORM =====
+      document.getElementById('orderForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('orderStatus').textContent = '✅ Order request sent! We will contact you shortly.';
+        this.reset();
+      });
+
+      // ===== CHATBOT (AI-powered responses) =====
+      const chatMessages = document.getElementById('chatMessages');
+      const chatInput = document.getElementById('chatInput');
+      const sendBtn = document.getElementById('sendChatBtn');
+      const typingIndicator = document.getElementById('typingIndicator');
+
+      // Knowledge base for the chatbot
+      const knowledgeBase = {
+        'laptop': 'We have a variety of laptops including student laptops from UGX 850,000 and business laptops from UGX 1,800,000. What specifications are you looking for?',
+        'student': 'For students, we recommend our Everyday Student Laptop with Intel Core i3, 8GB RAM, and 256GB SSD at UGX 850,000. It\'s perfect for classes, browsing, and programming basics.',
+        'gaming': 'Yes! We offer high-performance Gaming PCs starting from UGX 2,800,000 with Intel i7, RTX 3060, 16GB RAM, and 1TB SSD. We also have gaming accessories available.',
+        'delivery': 'We offer delivery services in Kampala and other parts of Uganda. Please contact us with your location so we can confirm availability and charges.',
+        'price': 'Our prices range from UGX 25,000 for accessories to over UGX 2,800,000 for high-end gaming PCs. Check our products section for specific prices.',
+        'specification': 'Each product has detailed specifications. You can click the "Details" button on any product to see the full specs including processor, RAM, storage, and screen size.',
+        'business': 'Our Business Laptop starts from UGX 1,800,000 with Intel Core i5, 16GB RAM, 512GB SSD, and a 14" FHD display. It\'s perfect for professionals and entrepreneurs.',
+        'accessory': 'We have a wide range of accessories including keyboards, mice, laptop bags, headsets, cables, and external storage starting from UGX 25,000.',
+        'monitor': 'We offer LED monitors from UGX 450,000. The 24" Full HD monitor with 75Hz refresh rate is popular for office work and entertainment.',
+        'office': 'Our Office Desktop starts from UGX 1,200,000 with Intel Core i5, 8GB RAM, and 512GB SSD. It comes with a 21.5" monitor and is perfect for office use.',
+        'hello': 'Hello! 👋 Welcome to For To You Computers & Laptops Center. How can I help you today? Feel free to ask about our products, pricing, delivery, or any other questions.',
+        'hi': 'Hi there! 👋 I\'m the For To You assistant. What can I help you with? Check out our products or ask me anything about computers and laptops.',
+        'help': 'I can help you with information about our computers, laptops, gaming PCs, monitors, accessories, pricing, delivery, and specifications. What would you like to know?',
+        'thank': 'You\'re welcome! 😊 Is there anything else I can help you with? Feel free to ask anytime.',
+        'thanks': 'You\'re welcome! 😊 Feel free to reach out if you have any more questions.',
+      };
+
+      // Simple AI response function
+      function getAIResponse(userMessage) {
+        const msg = userMessage.toLowerCase().trim();
+        
+        // Check for exact matches first
+        for (const [key, response] of Object.entries(knowledgeBase)) {
+          if (msg.includes(key) || key.includes(msg)) {
+            return response;
+          }
+        }
+
+        // Check for keywords
+        const keywords = {
+          'laptop': 'We have student laptops from UGX 850,000 and business laptops from UGX 1,800,000. What type are you looking for?',
+          'computer': 'We offer laptops, desktops, and gaming PCs. Check our products section for all options.',
+          'gaming': 'Our Gaming PCs start from UGX 2,800,000 with high-end specs including Intel i7 and RTX graphics.',
+          'price': 'Prices vary by product. Student laptops from UGX 850,000, business laptops from UGX 1,800,000, and gaming PCs from UGX 2,800,000.',
+          'delivery': 'We deliver in Kampala and across Uganda. Contact us with your location for details.',
+          'spec': 'Each product has a "Details" button with full specifications including processor, RAM, storage, and more.',
+          'student': 'Our student laptop is UGX 850,000 with Intel Core i3, 8GB RAM, and 256GB SSD. Great for university work!',
+          'business': 'Our business laptop is UGX 1,800,000 with Intel Core i5, 16GB RAM, and 512GB SSD.',
+          'monitor': 'LED monitors starting from UGX 450,000. The 24" FHD monitor is our most popular.',
+          'accessory': 'Accessories from UGX 25,000 including keyboards, mice, bags, and more.',
+          'hello': 'Hello! How can I assist you with your computer needs today?',
+          'hi': 'Hi there! What would you like to know about our products?',
+          'help': 'I can help with product information, pricing, delivery, or specifications. Ask me anything!',
+        };
+
+        for (const [key, response] of Object.entries(keywords)) {
+          if (msg.includes(key)) {
+            return response;
+          }
+        }
+
+        // Default response
+        return "Thank you for your question! 😊 I can help you with information about our laptops, desktops, gaming PCs, monitors, accessories, pricing, and delivery. Could you please be more specific about what you're looking for?";
+      }
+
+      function addMessage(text, isUser) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `chat-message ${isUser ? 'user' : 'bot'}`;
+        const avatar = document.createElement('div');
+        avatar.className = 'avatar';
+        avatar.textContent = isUser ? '👤' : '🤖';
+        const bubble = document.createElement('div');
+        bubble.className = 'bubble';
+        bubble.innerHTML = text;
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(bubble);
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }
+
+      function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message) return;
+
+        // Add user message
+        addMessage(message, true);
+        chatInput.value = '';
+        sendBtn.disabled = true;
+
+        // Show typing indicator
+        typingIndicator.classList.add('active');
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+
+        // Simulate AI thinking and response
+        setTimeout(() => {
+          typingIndicator.classList.remove('active');
+          const response = getAIResponse(message);
+          addMessage(response, false);
+          sendBtn.disabled = false;
+          chatInput.focus();
+        }, 800 + Math.random() * 600);
+      }
+
+      // Event listeners for chat
+      sendBtn.addEventListener('click', sendMessage);
+      chatInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          sendMessage();
+        }
+      });
+
+      // Auto-focus chat input on page load
+      setTimeout(() => chatInput.focus(), 500);
+
+      // ===== ACCOUNT (localStorage) =====
+      const accountName = document.getElementById('accountName');
+      const accountEmail = document.getElementById('accountEmail');
+      const accountPhone = document.getElementById('accountPhone');
+      const accountPassword = document.getElementById('accountPassword');
+      const accountStatus = document.getElementById('accountStatus');
+      const accountOrders = document.getElementById('accountOrders');
+      const logoutBtn = document.getElementById('accountLogout');
+
+      function loadAccount() {
+        const data = localStorage.getItem('fortoyou_account');
+        if (data) {
+          try {
+            const acc = JSON.parse(data);
+            accountName.value = acc.name || '';
+            accountEmail.value = acc.email || '';
+            accountPhone.value = acc.phone || '';
+            accountPassword.value = acc.password || '';
+            accountStatus.textContent = '✅ Account loaded.';
+            accountOrders.innerHTML = `<p>📦 You have order(s) now. Check your email for details.</p>`;
+          } catch(e) {}
+        } else {
+          accountOrders.innerHTML = `<p>Sign in/create an account to see your orders.</p>`;
+        }
+      }
+      loadAccount();
+
+      document.getElementById('accountForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const acc = {
+          name: accountName.value,
+          email: accountEmail.value,
+          phone: accountPhone.value,
+          password: accountPassword.value
+        };
+        localStorage.setItem('fortoyou_account', JSON.stringify(acc));
+        accountStatus.textContent = '✅ Account saved!';
+        accountOrders.innerHTML = `<p>📦 You have order(s) now. Check your email for details.</p>`;
+      });
+
+      logoutBtn.addEventListener('click', function() {
+        localStorage.removeItem('fortoyou_account');
+        accountName.value = ''; accountEmail.value = ''; accountPhone.value = ''; accountPassword.value = '';
+        accountStatus.textContent = 'Logged out.';
+        accountOrders.innerHTML = `<p>Sign in/create an account to see your orders.</p>`;
+      });
+
+      // ===== CHECKOUT MODAL =====
+      const checkoutModal = document.getElementById('checkoutModal');
+      document.querySelector('.nav-cta').addEventListener('click', function(e) {
+        e.preventDefault();
+        checkoutModal.classList.remove('hidden');
+      });
+      document.querySelectorAll('#checkoutModal .modal-close, #checkoutModal').forEach(el => {
+        el.addEventListener('click', function(e) {
+          if (e.target === this || this.classList.contains('modal-close')) {
+            checkoutModal.classList.add('hidden');
+          }
+        });
+      });
+
+      document.getElementById('checkoutForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('paymentStatus').textContent = '✅ Payment simulation complete. Thank you!';
+        setTimeout(() => { checkoutModal.classList.add('hidden'); }, 1500);
+      });
+    })();
+  </script>
+</body>
+</html>
