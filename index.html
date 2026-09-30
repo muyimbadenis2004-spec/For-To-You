@@ -485,8 +485,6 @@
     }
     .form-row label { flex: 1 1 160px; }
     .form-status { margin-top: 0.8rem; font-weight: 500; color: #1d4e7a; font-size: 1rem; }
-
-    /* ----- QUESTIONS SECTION WITH CHATBOT ----- */
     .questions {
       display: flex;
       flex-wrap: wrap;
@@ -515,169 +513,6 @@
     }
     .faq summary:hover { color: #1d4e7a; }
     .faq p { margin-top: 0.5rem; color: #1f3a57; }
-
-    /* Chatbot styles */
-    .chatbot-container {
-      flex: 2 1 400px;
-      background: white;
-      border-radius: 30px;
-      border: 1px solid #dce6f2;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      max-height: 550px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.04);
-      transition: all 0.3s ease;
-    }
-    .chatbot-container:hover { border-color: #b3c9df; }
-    .chat-header {
-      background: #1d4e7a;
-      color: white;
-      padding: 1rem 1.5rem;
-      display: flex;
-      align-items: center;
-      gap: 0.8rem;
-    }
-    .chat-header .bot-avatar {
-      width: 40px;
-      height: 40px;
-      background: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-    }
-    .chat-header h3 {
-      font-size: 1.1rem;
-      font-weight: 600;
-    }
-    .chat-header small {
-      font-size: 0.75rem;
-      opacity: 0.8;
-      display: block;
-    }
-    .chat-messages {
-      flex: 1;
-      padding: 1.2rem 1.5rem;
-      overflow-y: auto;
-      max-height: 280px;
-      background: #f8faff;
-    }
-    .chat-message {
-      margin-bottom: 0.8rem;
-      display: flex;
-      align-items: flex-start;
-      gap: 0.6rem;
-    }
-    .chat-message.bot {
-      justify-content: flex-start;
-    }
-    .chat-message.user {
-      justify-content: flex-end;
-    }
-    .chat-message .bubble {
-      max-width: 80%;
-      padding: 0.7rem 1.2rem;
-      border-radius: 18px;
-      font-size: 0.95rem;
-      line-height: 1.5;
-      word-wrap: break-word;
-    }
-    .chat-message.bot .bubble {
-      background: #eaf0f8;
-      color: #1a2639;
-      border-bottom-left-radius: 4px;
-    }
-    .chat-message.user .bubble {
-      background: #1d4e7a;
-      color: white;
-      border-bottom-right-radius: 4px;
-    }
-    .chat-message .avatar {
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.9rem;
-      flex-shrink: 0;
-    }
-    .chat-message.bot .avatar {
-      background: #1d4e7a;
-      color: white;
-    }
-    .chat-message.user .avatar {
-      background: #0b1a2e;
-      color: white;
-      order: 1;
-    }
-    .typing-indicator {
-      display: none;
-      padding: 0.5rem 1.2rem;
-      background: #eaf0f8;
-      border-radius: 18px;
-      border-bottom-left-radius: 4px;
-      width: fit-content;
-      font-size: 0.9rem;
-      color: #4b6a8a;
-    }
-    .typing-indicator.active { display: block; }
-    .typing-indicator span {
-      display: inline-block;
-      animation: dotPulse 1.4s infinite both;
-    }
-    .typing-indicator span:nth-child(2) { animation-delay: 0.2s; }
-    .typing-indicator span:nth-child(3) { animation-delay: 0.4s; }
-    @keyframes dotPulse {
-      0%, 80%, 100% { opacity: 0; transform: scale(0.8); }
-      40% { opacity: 1; transform: scale(1); }
-    }
-    .chat-input-area {
-      display: flex;
-      padding: 0.8rem 1.2rem;
-      gap: 0.6rem;
-      border-top: 1px solid #e2ebf5;
-      background: white;
-    }
-    .chat-input-area input {
-      flex: 1;
-      padding: 0.7rem 1.2rem;
-      border-radius: 30px;
-      border: 1px solid #cdddee;
-      font-family: inherit;
-      font-size: 0.95rem;
-      transition: all 0.3s ease;
-      background: #f7faff;
-    }
-    .chat-input-area input:focus {
-      outline: none;
-      border-color: #1d4e7a;
-      box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.12);
-    }
-    .chat-input-area .send-btn {
-      background: #1d4e7a;
-      color: white;
-      border: none;
-      padding: 0.7rem 1.4rem;
-      border-radius: 30px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      white-space: nowrap;
-    }
-    .chat-input-area .send-btn:hover {
-      background: #0f3a5c;
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(29, 78, 122, 0.25);
-    }
-    .chat-input-area .send-btn:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
-      transform: none;
-    }
 
     /* ----- ACCOUNT ----- */
     .account-grid {
@@ -796,7 +631,7 @@
     /* ----- CONTACT & FOOTER ----- */
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
       gap: 1.5rem;
     }
     .contact-card {
@@ -813,17 +648,7 @@
       box-shadow: 0 8px 24px rgba(0,20,40,0.06);
       border-color: #b3c9df;
     }
-    .contact-card .contact-icon {
-      display: inline-block;
-      width: 48px;
-      height: 48px;
-      margin-bottom: 0.5rem;
-    }
-    .contact-card .contact-icon svg {
-      width: 100%;
-      height: 100%;
-      display: block;
-    }
+    .contact-card span { font-size: 2.2rem; display: block; }
     .contact-card h3 { margin: 0.5rem 0; }
     .contact-card a {
       color: #1d4e7a;
@@ -831,30 +656,6 @@
       transition: color 0.3s ease;
     }
     .contact-card a:hover { color: #0f3a5c; }
-    .contact-card small { font-size: 0.8rem; color: #6a7f98; }
-
-    /* WhatsApp contact card icon */
-    .contact-card .whatsapp-icon {
-      display: inline-block;
-      width: 48px;
-      height: 48px;
-      background: #25D366;
-      border-radius: 50%;
-      padding: 10px;
-      margin-bottom: 0.5rem;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .contact-card .whatsapp-icon svg {
-      width: 100%;
-      height: 100%;
-      fill: white;
-      display: block;
-    }
-    .contact-card:hover .whatsapp-icon {
-      transform: scale(1.1) rotate(-5deg);
-      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
-    }
-
     footer {
       background: #0b1a2e;
       color: #c9d9ec;
@@ -985,8 +786,6 @@
       .account-grid { flex-direction: column; }
       .phone-with-code { flex-direction: column; align-items: stretch; }
       .phone-with-code select { width: 100%; }
-      .chatbot-container { max-height: 450px; }
-      .chat-messages { max-height: 200px; }
     }
     @media (max-width: 480px) {
       .topbar { flex-direction: column; align-items: center; gap: 0.2rem; }
@@ -1031,7 +830,7 @@
     <!-- HERO -->
     <section class="hero" id="home">
       <div class="hero-copy">
-        <p class="eyebrow">WELCOME TO "FOR TO YOU Computers & Laptops Center"</p>
+        <p class="eyebrow">WELCOME TO "FOR TO YOU Computers $ Laptops Center"</p>
         <h1>Your One-Stop Shop for Computers & <span>Laptops</span></h1>
         <p>Quality computers, laptops, gaming machines, monitors and accessories for students, offices, businesses, creators and gamers in Kampala and across Uganda.</p>
         <div class="hero-actions">
@@ -1146,7 +945,7 @@
           <button class="small-btn order-product" data-product="Computer Accessories">Order</button>
         </article>
       </div>
-      <p class="note">Prices shown are starting/placeholder prices for the website demo. Replace them with your actual stock prices.</p>
+      <p class="note">*Prices shown are starting/placeholder prices for the website demo. Replace them with your actual stock prices.</p>
     </section>
 
     <!-- VIDEOS - single section -->
@@ -1245,42 +1044,56 @@
       </form>
     </section>
 
-    <!-- QUESTIONS with AI Chatbot -->
+    <!-- QUESTIONS -->
     <section class="questions" id="questions">
       <div class="question-copy">
         <p class="eyebrow">HAVE A QUESTION?</p>
         <h2>Ask us anything about our products.</h2>
-        <p>Chat with our AI assistant for instant answers, or browse our FAQ below.</p>
+        <p>Customers can ask about specifications, compatibility, prices, stock, delivery, warranties and other business information.</p>
         <div class="faq">
           <details><summary>Which laptop is best for university?</summary><p>Tell us your course, budget and software needs. We can suggest suitable specifications.</p></details>
           <details><summary>Do you sell gaming computers?</summary><p>Yes. The gaming category can include gaming laptops, desktops, graphics cards and accessories depending on stock.</p></details>
           <details><summary>Do you deliver?</summary><p>Contact the business with your location so delivery availability and charges can be confirmed.</p></details>
         </div>
       </div>
-
-      <!-- AI CHATBOT -->
-      <div class="chatbot-container">
-        <div class="chat-header">
-          <div class="bot-avatar">🤖</div>
-          <div>
-            <h3>For To You Assistant</h3>
-            <small>AI-powered • Online</small>
+      <form class="form-card question-form" id="questionForm">
+        <label>Your Name<input name="name" required placeholder="Your name"></label>
+        <label>Phone or Email
+          <div class="phone-with-code">
+            <select id="questionPhoneCode" name="phoneCode">
+              <option value="+256">🇺🇬 +256 (Uganda)</option>
+              <option value="+1">🇺🇸 +1 (US/CA)</option>
+              <option value="+44">🇬🇧 +44 (UK)</option>
+              <option value="+91">🇮🇳 +91 (India)</option>
+              <option value="+61">🇦🇺 +61 (Australia)</option>
+              <option value="+234">🇳🇬 +234 (Nigeria)</option>
+              <option value="+254">🇰🇪 +254 (Kenya)</option>
+              <option value="+255">🇹🇿 +255 (Tanzania)</option>
+              <option value="+27">🇿🇦 +27 (South Africa)</option>
+              <option value="+233">🇬🇭 +233 (Ghana)</option>
+              <option value="+250">🇷🇼 +250 (Rwanda)</option>
+              <option value="+211">🇸🇸 +211 (South Sudan)</option>
+              <option value="+86">🇨🇳 +86 (China)</option>
+              <option value="+81">🇯🇵 +81 (Japan)</option>
+              <option value="+49">🇩🇪 +49 (Germany)</option>
+              <option value="+33">🇫🇷 +33 (France)</option>
+              <option value="+39">🇮🇹 +39 (Italy)</option>
+              <option value="+55">🇧🇷 +55 (Brazil)</option>
+              <option value="+52">🇲🇽 +52 (Mexico)</option>
+              <option value="+7">🇷🇺 +7 (Russia)</option>
+              <option value="+63">🇵🇭 +63 (Philippines)</option>
+              <option value="+92">🇵🇰 +92 (Pakistan)</option>
+              <option value="+20">🇪🇬 +20 (Egypt)</option>
+              <option value="+966">🇸🇦 +966 (Saudi Arabia)</option>
+              <option value="+971">🇦🇪 +971 (UAE)</option>
+            </select>
+            <input type="text" name="contact" required placeholder="Phone or email">
           </div>
-        </div>
-        <div class="chat-messages" id="chatMessages">
-          <div class="chat-message bot">
-            <div class="avatar">🤖</div>
-            <div class="bubble">Hello! 👋 I'm the For To You AI assistant. Ask me anything about our computers, laptops, pricing, delivery, or specifications. I'm here to help!</div>
-          </div>
-        </div>
-        <div class="typing-indicator" id="typingIndicator">
-          <span>•</span><span>•</span><span>•</span>
-        </div>
-        <div class="chat-input-area">
-          <input type="text" id="chatInput" placeholder="Type your question here..." autocomplete="off">
-          <button class="send-btn" id="sendChatBtn">Send</button>
-        </div>
-      </div>
+        </label>
+        <label>Your Question<textarea name="question" rows="6" required placeholder="Type your question here..."></textarea></label>
+        <button class="btn dark full" type="submit">Send Question</button>
+        <p class="form-status" id="questionStatus"></p>
+      </form>
     </section>
 
     <!-- ACCOUNT -->
@@ -1416,52 +1229,10 @@
         <h2>Let's get you the right computer.</h2>
       </div>
       <div class="contact-grid">
-        <!-- Location -->
-        <div class="contact-card">
-          <span class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1d4e7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
-              <circle cx="12" cy="10" r="3"/>
-            </svg>
-          </span>
-          <h3>Location</h3>
-          <p>Kampala, Uganda</p>
-          <small>Update with the exact shop address.</small>
-        </div>
-        <!-- Phone -->
-        <div class="contact-card">
-          <span class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1d4e7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-          </span>
-          <h3>Phone</h3>
-          <p>+256 750899569</p>
-          <small>Business contact (Uganda)</small>
-        </div>
-        <!-- Email -->
-        <div class="contact-card">
-          <span class="contact-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="#1d4e7a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-              <polyline points="22,6 12,13 2,6"/>
-            </svg>
-          </span>
-          <h3>Email</h3>
-          <p>muyimbadenis2004@gmail.com</p>
-          <small>Business email</small>
-        </div>
-        <!-- WhatsApp -->
-        <div class="contact-card">
-          <span class="whatsapp-icon">
-            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-            </svg>
-          </span>
-          <h3>WhatsApp</h3>
-          <p>Chat with us</p>
-          <a href="https://wa.me/256750899569" target="_blank" rel="noopener">Open WhatsApp</a>
-        </div>
+        <div class="contact-card"><span></span><h3>Location</h3><p>Kampala, Uganda</p><small>Update with the exact shop address.</small></div>
+        <div class="contact-card"><span></span><h3>Phone</h3><p>+256 750899569</p><small>Business contact (Uganda)</small></div>
+        <div class="contact-card"><span>✉</span><h3>Email</h3><p>muyimbadenis2004@gmail.com</p><small>Business email</small></div>
+        <div class="contact-card"><span>💬</span><h3>WhatsApp</h3><p>Chat with us</p><a href="https://wa.me/256750899569" target="_blank" rel="noopener">Open WhatsApp →</a></div>
       </div>
     </section>
   </main>
@@ -1486,32 +1257,12 @@
 
   <script>
     (function() {
-      // ===== MENU TOGGLE =====
-      const menuBtn = document.getElementById('menuBtn');
-      const mainNav = document.getElementById('mainNav');
-
-      // Toggle menu on button click
-      menuBtn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        mainNav.classList.toggle('open');
+      // Menu toggle
+      document.getElementById('menuBtn').addEventListener('click', function() {
+        document.getElementById('mainNav').classList.toggle('open');
       });
 
-      // Close menu when any nav link is clicked (for single-page navigation)
-      const navLinks = mainNav.querySelectorAll('a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-          mainNav.classList.remove('open');
-        });
-      });
-
-      // Also close menu if user clicks outside
-      document.addEventListener('click', function(e) {
-        if (!mainNav.contains(e.target) && !menuBtn.contains(e.target)) {
-          mainNav.classList.remove('open');
-        }
-      });
-
-      // ===== PRODUCT FILTER & SEARCH =====
+      // Product filter & search
       const productGrid = document.getElementById('productGrid');
       const products = productGrid.querySelectorAll('.product');
       const filters = document.querySelectorAll('.filter');
@@ -1538,7 +1289,7 @@
       });
       search.addEventListener('input', filterProducts);
 
-      // ===== PRODUCT DATA =====
+      // Product data for details modal
       const productData = {
         'Everyday Student Laptop': { cat:'Laptop', desc:'Ideal for students: Intel Core i3, 8GB RAM, 256GB SSD, 14" HD display.', price:'UGX 850,000', img:'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=900&q=80', specs:['Processor: Intel i3','RAM: 8GB','Storage: 256GB SSD','Screen: 14" HD'] },
         'Business Laptop': { cat:'Laptop', desc:'Premium business laptop with Intel Core i5, 16GB RAM, 512GB SSD, 14" FHD.', price:'UGX 1,800,000', img:'https://images.unsplash.com/photo-1602080858428-57174f9431cf?auto=format&fit=crop&w=900&q=80', specs:['Processor: Intel i5','RAM: 16GB','Storage: 512GB SSD','Screen: 14" FHD'] },
@@ -1548,7 +1299,6 @@
         'Computer Accessories': { cat:'Accessory', desc:'Keyboards, mice, bags, headsets, USB hubs, cables, external storage.', price:'From UGX 25,000', img:'https://images.unsplash.com/photo-1527814050087-3793815479db?auto=format&fit=crop&w=900&q=80', specs:['Variety of accessories','Gaming & office','USB-C hubs','External drives'] }
       };
 
-      // ===== PRODUCT DETAILS MODAL =====
       const detailModal = document.getElementById('productDetailsModal');
       const detailName = document.getElementById('detailName');
       const detailCategory = document.getElementById('detailCategory');
@@ -1588,7 +1338,7 @@
         document.getElementById('order').scrollIntoView({ behavior: 'smooth' });
       });
 
-      // ===== ORDER PRODUCT BUTTONS =====
+      // Order product buttons -> fill order form
       document.querySelectorAll('.order-product').forEach(btn => {
         btn.addEventListener('click', function() {
           const name = this.dataset.product;
@@ -1597,127 +1347,21 @@
         });
       });
 
-      // ===== ORDER FORM =====
+      // Order form
       document.getElementById('orderForm').addEventListener('submit', function(e) {
         e.preventDefault();
         document.getElementById('orderStatus').textContent = '✅ Order request sent! We will contact you shortly.';
         this.reset();
       });
 
-      // ===== CHATBOT (AI-powered responses) =====
-      const chatMessages = document.getElementById('chatMessages');
-      const chatInput = document.getElementById('chatInput');
-      const sendBtn = document.getElementById('sendChatBtn');
-      const typingIndicator = document.getElementById('typingIndicator');
-
-      // Knowledge base for the chatbot
-      const knowledgeBase = {
-        'laptop': 'We have a variety of laptops including student laptops from UGX 850,000 and business laptops from UGX 1,800,000. What specifications are you looking for?',
-        'student': 'For students, we recommend our Everyday Student Laptop with Intel Core i3, 8GB RAM, and 256GB SSD at UGX 850,000. It\'s perfect for classes, browsing, and programming basics.',
-        'gaming': 'Yes! We offer high-performance Gaming PCs starting from UGX 2,800,000 with Intel i7, RTX 3060, 16GB RAM, and 1TB SSD. We also have gaming accessories available.',
-        'delivery': 'We offer delivery services in Kampala and other parts of Uganda. Please contact us with your location so we can confirm availability and charges.',
-        'price': 'Our prices range from UGX 25,000 for accessories to over UGX 2,800,000 for high-end gaming PCs. Check our products section for specific prices.',
-        'specification': 'Each product has detailed specifications. You can click the "Details" button on any product to see the full specs including processor, RAM, storage, and screen size.',
-        'business': 'Our Business Laptop starts from UGX 1,800,000 with Intel Core i5, 16GB RAM, 512GB SSD, and a 14" FHD display. It\'s perfect for professionals and entrepreneurs.',
-        'accessory': 'We have a wide range of accessories including keyboards, mice, laptop bags, headsets, cables, and external storage starting from UGX 25,000.',
-        'monitor': 'We offer LED monitors from UGX 450,000. The 24" Full HD monitor with 75Hz refresh rate is popular for office work and entertainment.',
-        'office': 'Our Office Desktop starts from UGX 1,200,000 with Intel Core i5, 8GB RAM, and 512GB SSD. It comes with a 21.5" monitor and is perfect for office use.',
-        'hello': 'Hello! 👋 Welcome to For To You Computers & Laptops Center. How can I help you today? Feel free to ask about our products, pricing, delivery, or any other questions.',
-        'hi': 'Hi there! 👋 I\'m the For To You assistant. What can I help you with? Check out our products or ask me anything about computers and laptops.',
-        'help': 'I can help you with information about our computers, laptops, gaming PCs, monitors, accessories, pricing, delivery, and specifications. What would you like to know?',
-        'thank': 'You\'re welcome! 😊 Is there anything else I can help you with? Feel free to ask anytime.',
-        'thanks': 'You\'re welcome! 😊 Feel free to reach out if you have any more questions.',
-      };
-
-      // Simple AI response function
-      function getAIResponse(userMessage) {
-        const msg = userMessage.toLowerCase().trim();
-        
-        // Check for exact matches first
-        for (const [key, response] of Object.entries(knowledgeBase)) {
-          if (msg.includes(key) || key.includes(msg)) {
-            return response;
-          }
-        }
-
-        // Check for keywords
-        const keywords = {
-          'laptop': 'We have student laptops from UGX 850,000 and business laptops from UGX 1,800,000. What type are you looking for?',
-          'computer': 'We offer laptops, desktops, and gaming PCs. Check our products section for all options.',
-          'gaming': 'Our Gaming PCs start from UGX 2,800,000 with high-end specs including Intel i7 and RTX graphics.',
-          'price': 'Prices vary by product. Student laptops from UGX 850,000, business laptops from UGX 1,800,000, and gaming PCs from UGX 2,800,000.',
-          'delivery': 'We deliver in Kampala and across Uganda. Contact us with your location for details.',
-          'spec': 'Each product has a "Details" button with full specifications including processor, RAM, storage, and more.',
-          'student': 'Our student laptop is UGX 850,000 with Intel Core i3, 8GB RAM, and 256GB SSD. Great for university work!',
-          'business': 'Our business laptop is UGX 1,800,000 with Intel Core i5, 16GB RAM, and 512GB SSD.',
-          'monitor': 'LED monitors starting from UGX 450,000. The 24" FHD monitor is our most popular.',
-          'accessory': 'Accessories from UGX 25,000 including keyboards, mice, bags, and more.',
-          'hello': 'Hello! How can I assist you with your computer needs today?',
-          'hi': 'Hi there! What would you like to know about our products?',
-          'help': 'I can help with product information, pricing, delivery, or specifications. Ask me anything!',
-        };
-
-        for (const [key, response] of Object.entries(keywords)) {
-          if (msg.includes(key)) {
-            return response;
-          }
-        }
-
-        // Default response
-        return "Thank you for your question! 😊 I can help you with information about our laptops, desktops, gaming PCs, monitors, accessories, pricing, and delivery. Could you please be more specific about what you're looking for?";
-      }
-
-      function addMessage(text, isUser) {
-        const messageDiv = document.createElement('div');
-        messageDiv.className = `chat-message ${isUser ? 'user' : 'bot'}`;
-        const avatar = document.createElement('div');
-        avatar.className = 'avatar';
-        avatar.textContent = isUser ? '👤' : '🤖';
-        const bubble = document.createElement('div');
-        bubble.className = 'bubble';
-        bubble.innerHTML = text;
-        messageDiv.appendChild(avatar);
-        messageDiv.appendChild(bubble);
-        chatMessages.appendChild(messageDiv);
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-      }
-
-      function sendMessage() {
-        const message = chatInput.value.trim();
-        if (!message) return;
-
-        // Add user message
-        addMessage(message, true);
-        chatInput.value = '';
-        sendBtn.disabled = true;
-
-        // Show typing indicator
-        typingIndicator.classList.add('active');
-        chatMessages.scrollTop = chatMessages.scrollHeight;
-
-        // Simulate AI thinking and response
-        setTimeout(() => {
-          typingIndicator.classList.remove('active');
-          const response = getAIResponse(message);
-          addMessage(response, false);
-          sendBtn.disabled = false;
-          chatInput.focus();
-        }, 800 + Math.random() * 600);
-      }
-
-      // Event listeners for chat
-      sendBtn.addEventListener('click', sendMessage);
-      chatInput.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-          e.preventDefault();
-          sendMessage();
-        }
+      // Question form
+      document.getElementById('questionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        document.getElementById('questionStatus').textContent = '✅ Your question has been sent. We’ll reply soon.';
+        this.reset();
       });
 
-      // Auto-focus chat input on page load
-      setTimeout(() => chatInput.focus(), 500);
-
-      // ===== ACCOUNT (localStorage) =====
+      // Account (localStorage)
       const accountName = document.getElementById('accountName');
       const accountEmail = document.getElementById('accountEmail');
       const accountPhone = document.getElementById('accountPhone');
@@ -1736,7 +1380,7 @@
             accountPhone.value = acc.phone || '';
             accountPassword.value = acc.password || '';
             accountStatus.textContent = '✅ Account loaded.';
-            accountOrders.innerHTML = `<p>📦 You have order(s) now. Check your email for details.</p>`;
+            accountOrders.innerHTML = `<p>📦 You have 2 orders (demo). Check your email for details.</p>`;
           } catch(e) {}
         } else {
           accountOrders.innerHTML = `<p>Sign in/create an account to see your orders.</p>`;
@@ -1754,7 +1398,7 @@
         };
         localStorage.setItem('fortoyou_account', JSON.stringify(acc));
         accountStatus.textContent = '✅ Account saved!';
-        accountOrders.innerHTML = `<p>📦 You have order(s) now. Check your email for details.</p>`;
+        accountOrders.innerHTML = `<p>📦 You have 2 orders (demo). Check your email for details.</p>`;
       });
 
       logoutBtn.addEventListener('click', function() {
@@ -1764,7 +1408,7 @@
         accountOrders.innerHTML = `<p>Sign in/create an account to see your orders.</p>`;
       });
 
-      // ===== CHECKOUT MODAL =====
+      // Checkout modal
       const checkoutModal = document.getElementById('checkoutModal');
       document.querySelector('.nav-cta').addEventListener('click', function(e) {
         e.preventDefault();
