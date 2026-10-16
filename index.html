@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   <meta name="description" content="For To You Computers & Laptops - computers, laptops, gaming PCs, monitors and accessories in Kampala, Uganda.">
   <title>For To You | Computers & Laptops Center - Kampala, Uganda</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,59 +11,67 @@
   <style>
     /* ----- RESET & BASE ----- */
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      max-width: 100%;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
     body {
       font-family: 'Inter', sans-serif;
       background: #f4f7fc; color: #1a2639;
-      line-height: 1.6; font-size: 1.05rem;
+      line-height: 1.55; font-size: 1rem;
     }
     a { text-decoration: none; color: inherit; }
     img { max-width: 100%; display: block; }
     .hidden { display: none !important; }
     body.menu-open { overflow: hidden; }
+    button, input, select, textarea { font-family: inherit; }
 
     /* ----- TOPBAR ----- */
     .topbar {
-      background: #0b1a2e; color: #cdd9e9; font-size: 0.9rem;
-      padding: 0.5rem 2rem; display: flex; flex-wrap: wrap;
+      background: #0b1a2e; color: #cdd9e9; font-size: 0.82rem;
+      padding: 0.45rem 1rem; display: flex; flex-wrap: wrap;
       justify-content: space-between; border-bottom: 1px solid #2a3f5a;
+      gap: 0.2rem;
     }
-    .toplinks span { margin-left: 1.5rem; }
+    .toplinks { display: flex; flex-wrap: wrap; gap: 0.2rem 0.9rem; }
+    .toplinks span { margin: 0; }
     .one-page-banner {
       background: #d4e2f7; color: #0b1a2e; text-align: center;
-      padding: 0.6rem 1rem; font-size: 1rem; font-weight: 500;
+      padding: 0.5rem 0.9rem; font-size: 0.85rem; font-weight: 500;
       border-bottom: 1px solid #b0c8e0;
     }
 
     /* ----- HEADER ----- */
     .header {
-      background: #ffffff; padding: 0.9rem 2rem;
+      background: #ffffff; padding: 0.7rem 1rem;
       display: flex; align-items: center; justify-content: space-between;
       flex-wrap: wrap; box-shadow: 0 2px 8px rgba(0,0,0,0.04);
       position: sticky; top: 0; z-index: 100;
       border-bottom: 1px solid #e2eaf3;
     }
     .logo {
-      display: flex; align-items: center; gap: 0.7rem;
-      font-weight: 700; font-size: 1.6rem;
+      display: flex; align-items: center; gap: 0.5rem;
+      font-weight: 700; font-size: 1.2rem; min-width: 0;
     }
-    .logo-mark { font-size: 2rem; }
+    .logo-mark { font-size: 1.5rem; }
     .logo small {
-      display: block; font-weight: 400; font-size: 0.7rem;
-      color: #3e5d7e; letter-spacing: 0.5px;
+      display: block; font-weight: 400; font-size: 0.62rem;
+      color: #3e5d7e; letter-spacing: 0.4px;
     }
     .menu-btn {
-      background: none; border: none; font-size: 2rem; cursor: pointer;
+      background: none; border: none; font-size: 1.6rem; cursor: pointer;
       display: none; color: #0b1a2e; transition: transform 0.3s, color 0.3s;
-      padding: 0.3rem 0.6rem; border-radius: 10px;
+      padding: 0.3rem 0.55rem; border-radius: 10px;
     }
     .menu-btn:hover { color: #1d4e7a; background: #eef3f9; }
     .menu-btn.open { transform: rotate(90deg); color: #1d4e7a; }
 
     nav {
-      display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; align-items: center;
+      display: flex; flex-wrap: wrap; gap: 0.3rem 1rem; align-items: center;
     }
     nav a {
-      font-weight: 500; font-size: 1rem; color: #1f3a57;
+      font-weight: 500; font-size: 0.95rem; color: #1f3a57;
       padding: 0.3rem 0; border-bottom: 2px solid transparent;
       transition: all 0.3s ease;
     }
@@ -72,8 +80,8 @@
     }
     .nav-cta {
       background: #1d4e7a; color: white !important;
-      padding: 0.6rem 1.6rem; border-radius: 30px;
-      font-weight: 600; font-size: 1rem; border: none;
+      padding: 0.55rem 1.3rem; border-radius: 30px;
+      font-weight: 600; font-size: 0.92rem; border: none;
       transition: all 0.3s ease; cursor: pointer;
     }
     .nav-cta:hover {
@@ -81,7 +89,7 @@
       box-shadow: 0 4px 12px rgba(29, 78, 122, 0.3);
     }
 
-    /* ----- MOBILE NAV OVERLAY ----- */
+    /* Mobile nav overlay */
     .nav-overlay {
       position: fixed; inset: 0;
       background: rgba(0,0,0,0.35);
@@ -97,25 +105,25 @@
     /* ----- HERO ----- */
     .hero {
       display: flex; flex-wrap: wrap; align-items: center;
-      justify-content: space-between; padding: 3rem 2rem 2.5rem;
-      background: linear-gradient(145deg, #f0f6fe, #ffffff); gap: 2rem;
+      justify-content: space-between; padding: 2rem 1rem 1.8rem;
+      background: linear-gradient(145deg, #f0f6fe, #ffffff); gap: 1.5rem;
     }
-    .hero-copy { flex: 1 1 380px; }
+    .hero-copy { flex: 1 1 320px; min-width: 0; }
     .hero-copy h1 {
-      font-size: 3.2rem; font-weight: 800; line-height: 1.2;
-      margin: 0.5rem 0 0.8rem;
+      font-size: 2rem; font-weight: 800; line-height: 1.2;
+      margin: 0.4rem 0 0.6rem;
     }
     .hero-copy h1 span { color: #1d4e7a; }
     .eyebrow {
-      font-size: 0.85rem; letter-spacing: 2px; color: #2a6b9e;
+      font-size: 0.75rem; letter-spacing: 1.5px; color: #2a6b9e;
       font-weight: 600; text-transform: uppercase;
     }
     .hero-actions {
-      display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1.5rem 0 1.2rem;
+      display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 1.1rem 0 1rem;
     }
     .btn {
-      display: inline-block; padding: 0.8rem 2rem; border-radius: 40px;
-      font-weight: 600; font-size: 1.05rem; border: none; cursor: pointer;
+      display: inline-block; padding: 0.7rem 1.6rem; border-radius: 40px;
+      font-weight: 600; font-size: 0.95rem; border: none; cursor: pointer;
       transition: all 0.3s ease; background: #eef3f9; color: #1a2639;
     }
     .btn.primary { background: #1d4e7a; color: white; }
@@ -137,57 +145,59 @@
     }
     .btn.full { width: 100%; text-align: center; }
     .trust-row {
-      display: flex; flex-wrap: wrap; gap: 0.8rem 1.5rem;
-      font-size: 1rem; color: #1f3a57;
+      display: flex; flex-wrap: wrap; gap: 0.5rem 1rem;
+      font-size: 0.88rem; color: #1f3a57;
     }
-    .hero-visual { flex: 1 1 260px; }
+    .hero-visual { flex: 1 1 240px; min-width: 0; }
     .hero-card {
-      background: #ffffff; padding: 1.5rem 1rem; border-radius: 28px;
-      box-shadow: 0 12px 28px rgba(0,20,40,0.08); text-align: center;
+      background: #ffffff; padding: 1rem 0.8rem; border-radius: 20px;
+      box-shadow: 0 10px 22px rgba(0,20,40,0.08); text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
     .hero-card:hover {
-      transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,20,40,0.12);
+      transform: translateY(-4px); box-shadow: 0 16px 32px rgba(0,20,40,0.12);
     }
     .hero-card img {
-      max-height: 180px; margin: 0 auto; border-radius: 12px;
+      max-height: 150px; margin: 0 auto; border-radius: 12px;
       background: #dce6f2; width: 100%; object-fit: contain;
     }
     .sale {
       display: inline-block; background: #c44536; color: white;
-      padding: 0.2rem 1.2rem; border-radius: 30px;
-      font-size: 0.8rem; font-weight: 700; letter-spacing: 1px;
-      margin-bottom: 0.8rem; transition: transform 0.3s ease;
+      padding: 0.2rem 1rem; border-radius: 30px;
+      font-size: 0.72rem; font-weight: 700; letter-spacing: 1px;
+      margin-bottom: 0.6rem; transition: transform 0.3s ease;
     }
     .sale:hover { transform: scale(1.05); }
 
     /* ----- SECTIONS ----- */
-    .section { padding: 3rem 2rem; max-width: 1280px; margin: 0 auto; }
-    .section.alt { background: #eaf0f8; border-radius: 40px 40px 0 0; }
-    .section-heading { margin-bottom: 2.5rem; }
-    .section-heading h2 { font-size: 2.5rem; font-weight: 700; margin: 0.2rem 0 0.5rem; }
-    .section-heading p { color: #2f4a67; max-width: 600px; font-size: 1.05rem; }
+    .section { padding: 2rem 1rem; max-width: 1280px; margin: 0 auto; }
+    .section.alt { background: #eaf0f8; border-radius: 30px 30px 0 0; }
+    .section-heading { margin-bottom: 1.6rem; }
+    .section-heading h2 { font-size: 1.6rem; font-weight: 700; margin: 0.2rem 0 0.4rem; }
+    .section-heading p { color: #2f4a67; max-width: 600px; font-size: 0.95rem; }
     .split {
       display: flex; flex-wrap: wrap; justify-content: space-between;
-      align-items: flex-end; gap: 1.5rem;
+      align-items: flex-end; gap: 1rem;
     }
     .product-tools {
-      display: flex; flex-wrap: wrap; align-items: center; gap: 1rem;
+      display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;
+      width: 100%;
     }
     .site-search {
-      padding: 0.7rem 1.2rem; border-radius: 30px;
-      border: 1px solid #cbd8e8; background: white; min-width: 220px;
-      font-size: 1rem; transition: all 0.3s ease;
+      padding: 0.6rem 1rem; border-radius: 30px;
+      border: 1px solid #cbd8e8; background: white;
+      font-size: 0.95rem; transition: all 0.3s ease;
+      min-width: 0; width: 100%; max-width: 100%;
     }
     .site-search:focus {
       outline: none; border-color: #1d4e7a;
       box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.15);
     }
-    .filters { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .filters { display: flex; flex-wrap: wrap; gap: 0.4rem; }
     .filter {
       background: transparent; border: 1px solid #b3c9df;
-      padding: 0.4rem 1.2rem; border-radius: 30px;
-      font-weight: 500; cursor: pointer; font-size: 0.9rem;
+      padding: 0.35rem 0.9rem; border-radius: 30px;
+      font-weight: 500; cursor: pointer; font-size: 0.82rem;
       transition: all 0.3s ease;
     }
     .filter:hover { background: #dce6f2; transform: translateY(-2px); }
@@ -201,21 +211,24 @@
 
     /* ----- PRODUCT GRID ----- */
     .product-grid {
-      display: grid; grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
-      gap: 2rem; margin-top: 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+      gap: 0.9rem;
+      margin-top: 1.2rem;
     }
     .product {
-      background: white; border-radius: 24px; padding: 1.4rem 1.2rem 1.6rem;
+      background: white; border-radius: 18px; padding: 0.8rem 0.7rem 1rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.02); transition: all 0.3s ease;
       border: 1px solid #e2ebf5; display: flex; flex-direction: column;
+      min-width: 0;
     }
     .product:hover {
       box-shadow: 0 12px 28px rgba(0,20,40,0.08);
-      transform: translateY(-4px); border-color: #b3c9df;
+      transform: translateY(-3px); border-color: #b3c9df;
     }
     .product-image {
-      height: 170px; background: #f0f5fc; border-radius: 16px;
-      overflow: hidden; margin-bottom: 0.8rem;
+      height: 120px; background: #f0f5fc; border-radius: 14px;
+      overflow: hidden; margin-bottom: 0.6rem;
     }
     .product-image.slideshow { position: relative; }
     .product-image.slideshow .slide {
@@ -225,10 +238,10 @@
     .product-image.slideshow .slide.fade-out { opacity: 0; }
 
     .brand-tag {
-      position: absolute; top: 0.6rem; left: 0.6rem;
+      position: absolute; top: 0.4rem; left: 0.4rem;
       background: rgba(11, 26, 46, 0.82); color: #fff;
-      padding: 0.2rem 0.75rem; border-radius: 20px;
-      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.5px;
+      padding: 0.15rem 0.55rem; border-radius: 20px;
+      font-size: 0.62rem; font-weight: 700; letter-spacing: 0.4px;
       backdrop-filter: blur(4px);
       transition: transform 0.3s ease, background 0.3s ease;
     }
@@ -238,8 +251,8 @@
     .slide-nav {
       position: absolute; top: 50%; transform: translateY(-50%);
       background: rgba(255,255,255,0.85); border: none;
-      width: 30px; height: 30px; border-radius: 50%;
-      cursor: pointer; font-size: 1.3rem; font-weight: 700;
+      width: 24px; height: 24px; border-radius: 50%;
+      cursor: pointer; font-size: 1.05rem; font-weight: 700;
       color: #0b1a2e; display: flex; align-items: center;
       justify-content: center; opacity: 0;
       transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
@@ -250,103 +263,101 @@
       background: #1d4e7a; color: white;
       transform: translateY(-50%) scale(1.1);
     }
-    .slide-nav.prev { left: 0.5rem; }
-    .slide-nav.next { right: 0.5rem; }
+    .slide-nav.prev { left: 0.35rem; }
+    .slide-nav.next { right: 0.35rem; }
     .slide-dots {
-      position: absolute; bottom: 0.5rem; left: 50%;
-      transform: translateX(-50%); display: flex; gap: 4px; z-index: 2;
+      position: absolute; bottom: 0.35rem; left: 50%;
+      transform: translateX(-50%); display: flex; gap: 3px; z-index: 2;
     }
     .slide-dots span {
-      width: 6px; height: 6px; border-radius: 50%;
+      width: 5px; height: 5px; border-radius: 50%;
       background: rgba(255,255,255,0.55); cursor: pointer;
       transition: all 0.3s ease;
     }
     .slide-dots span.active {
-      background: #fff; width: 16px; border-radius: 3px;
+      background: #fff; width: 12px; border-radius: 3px;
     }
 
     .tag {
-      background: #d4e2f7; padding: 0.1rem 0.8rem; border-radius: 30px;
-      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
-      color: #1d4e7a; display: inline-block; margin-bottom: 0.5rem;
+      background: #d4e2f7; padding: 0.1rem 0.6rem; border-radius: 30px;
+      font-size: 0.6rem; font-weight: 600; text-transform: uppercase;
+      color: #1d4e7a; display: inline-block; margin-bottom: 0.35rem;
       align-self: flex-start; transition: background 0.3s ease;
     }
     .product:hover .tag { background: #b8cfe7; }
-    .product h3 { font-size: 1.2rem; margin-bottom: 0.2rem; }
-    .product p { font-size: 0.95rem; color: #3a5776; margin: 0.3rem 0; flex: 1; }
+    .product h3 { font-size: 0.95rem; margin-bottom: 0.15rem; line-height: 1.3; }
+    .product p { font-size: 0.78rem; color: #3a5776; margin: 0.2rem 0; flex: 1; line-height: 1.4; }
     .price {
-      font-weight: 700; color: #0b1a2e; font-size: 1.2rem;
-      margin: 0.6rem 0 0.7rem;
+      font-weight: 700; color: #0b1a2e; font-size: 0.9rem;
+      margin: 0.4rem 0 0.5rem;
     }
     .small-btn {
-      background: #eaf0f8; border: none; padding: 0.4rem 1.2rem;
-      border-radius: 30px; font-weight: 500; font-size: 0.85rem;
+      background: #eaf0f8; border: none; padding: 0.35rem 0.9rem;
+      border-radius: 30px; font-weight: 500; font-size: 0.75rem;
       cursor: pointer; transition: all 0.3s ease;
-      margin-right: 0.3rem; margin-bottom: 0.3rem;
+      margin-right: 0.25rem; margin-bottom: 0.25rem;
     }
     .small-btn:hover {
       background: #1d4e7a; color: white; transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(29, 78, 122, 0.25);
     }
-    .note { font-size: 0.9rem; color: #4b6a8a; margin-top: 1rem; }
+    .note { font-size: 0.82rem; color: #4b6a8a; margin-top: 0.8rem; }
 
     /* ----- VIDEOS ----- */
     .video-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
-      gap: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px,1fr));
+      gap: 1rem;
     }
     .video-card {
-      background: white; border-radius: 24px; padding: 1.2rem;
+      background: white; border-radius: 18px; padding: 0.9rem;
       box-shadow: 0 4px 12px rgba(0,0,0,0.02); border: 1px solid #e2ebf5;
       transition: all 0.3s ease;
     }
     .video-card:hover {
-      transform: translateY(-4px); box-shadow: 0 12px 28px rgba(0,20,40,0.08);
+      transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,20,40,0.08);
       border-color: #b3c9df;
     }
     .video-frame {
-      aspect-ratio: 16/9; background: #0b1a2e; border-radius: 16px;
+      aspect-ratio: 16/9; background: #0b1a2e; border-radius: 12px;
       overflow: hidden;
     }
     .video-frame iframe { width: 100%; height: 100%; border: 0; }
-    .video-card h3 { margin: 0.8rem 0 0.2rem; font-size: 1.1rem; }
-    .video-card p { font-size: 0.95rem; color: #2f4a67; }
+    .video-card h3 { margin: 0.6rem 0 0.15rem; font-size: 0.95rem; }
+    .video-card p { font-size: 0.82rem; color: #2f4a67; }
 
     /* ----- ORDER / QUESTIONS ----- */
     .order-section {
-      display: flex; flex-wrap: wrap; gap: 2.5rem;
-      background: #ffffff; border-radius: 40px; padding: 2.5rem;
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      background: #ffffff; border-radius: 26px; padding: 1.5rem 1rem;
       box-shadow: 0 4px 16px rgba(0,0,0,0.02);
       transition: box-shadow 0.3s ease;
     }
     .order-section:hover { box-shadow: 0 8px 32px rgba(0,0,0,0.04); }
-    .order-intro { flex: 1 1 280px; }
-    .order-intro ul { margin: 1rem 0 0; list-style: none; font-size: 1rem; }
-    .order-intro li { margin: 0.4rem 0; padding-left: 1.2rem; position: relative; }
+    .order-intro { flex: 1 1 260px; min-width: 0; }
+    .order-intro ul { margin: 0.8rem 0 0; list-style: none; font-size: 0.9rem; }
+    .order-intro li { margin: 0.3rem 0; padding-left: 1.1rem; position: relative; }
     .order-intro li::before {
       content: "✓"; position: absolute; left: 0; color: #1d4e7a; font-weight: 700;
     }
 
-    .order-picker {
-      display: grid; grid-template-columns: 1fr; gap: 1rem;
-    }
+    .order-picker { display: grid; grid-template-columns: 1fr; gap: 0.9rem; }
     .picker-label {
-      font-weight: 600; font-size: 0.9rem; color: #1d4e7a;
-      margin-bottom: 0.4rem; display: block;
-      text-transform: uppercase; letter-spacing: 0.5px;
+      font-weight: 600; font-size: 0.78rem; color: #1d4e7a;
+      margin-bottom: 0.3rem; display: block;
+      text-transform: uppercase; letter-spacing: 0.4px;
     }
 
     .variant-grid {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 0.7rem; margin-top: 0.5rem;
+      display: grid; grid-template-columns: 1fr;
+      gap: 0.55rem; margin-top: 0.4rem;
     }
-    @media (max-width: 600px) { .variant-grid { grid-template-columns: 1fr; } }
 
     .variant-card {
       background: #ffffff; border: 2px solid #dce6f2;
-      border-radius: 20px; padding: 0.9rem; cursor: pointer;
-      transition: all 0.25s ease; display: flex; gap: 0.8rem;
-      align-items: center; position: relative;
+      border-radius: 14px; padding: 0.6rem; cursor: pointer;
+      transition: all 0.25s ease; display: flex; gap: 0.6rem;
+      align-items: center; position: relative; min-width: 0;
     }
     .variant-card:hover {
       border-color: #1d4e7a; transform: translateY(-2px);
@@ -357,113 +368,119 @@
       box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.15);
     }
     .variant-card img {
-      width: 60px; height: 60px; object-fit: cover;
-      border-radius: 12px; background: #eef3f9; flex-shrink: 0;
+      width: 48px; height: 48px; object-fit: cover;
+      border-radius: 10px; background: #eef3f9; flex-shrink: 0;
     }
     .variant-card .variant-info { flex: 1; min-width: 0; }
     .variant-card .variant-brand {
-      font-size: 0.7rem; font-weight: 700; color: #1d4e7a;
-      letter-spacing: 1px; text-transform: uppercase;
+      font-size: 0.62rem; font-weight: 700; color: #1d4e7a;
+      letter-spacing: 0.8px; text-transform: uppercase;
     }
     .variant-card .variant-name {
-      font-size: 0.95rem; font-weight: 600; color: #0b1a2e;
-      margin: 0.15rem 0; overflow: hidden;
+      font-size: 0.85rem; font-weight: 600; color: #0b1a2e;
+      margin: 0.1rem 0; overflow: hidden;
       text-overflow: ellipsis; white-space: nowrap;
     }
     .variant-card .variant-price {
-      font-size: 0.9rem; font-weight: 700; color: #2a6b9e;
+      font-size: 0.8rem; font-weight: 700; color: #2a6b9e;
     }
     .variant-card.selected::after {
-      content: "✓"; position: absolute; top: 0.5rem; right: 0.6rem;
-      width: 20px; height: 20px; background: #1d4e7a; color: white;
-      border-radius: 50%; font-size: 0.7rem;
+      content: "✓"; position: absolute; top: 0.4rem; right: 0.5rem;
+      width: 18px; height: 18px; background: #1d4e7a; color: white;
+      border-radius: 50%; font-size: 0.65rem;
       display: flex; align-items: center; justify-content: center;
       font-weight: 700;
     }
 
     .total-input {
       background: #eaf0f8 !important; font-weight: 700 !important;
-      color: #0b1a2e !important; font-size: 1.15rem !important;
+      color: #0b1a2e !important; font-size: 1rem !important;
       cursor: not-allowed;
     }
     .payment-instructions {
       background: #e8f4ec; border: 1px solid #a8d5b8;
-      border-left: 4px solid #1d7a4e; border-radius: 16px;
-      padding: 1rem 1.2rem; margin: 0.8rem 0;
-      font-size: 0.95rem; color: #0f3a24;
+      border-left: 4px solid #1d7a4e; border-radius: 14px;
+      padding: 0.8rem 0.9rem; margin: 0.6rem 0;
+      font-size: 0.85rem; color: #0f3a24;
       animation: slideUp 0.3s ease;
     }
     .payment-instructions strong { color: #0b1a2e; }
     .payment-instructions .inst-detail {
-      background: white; border-radius: 10px; padding: 0.6rem 0.9rem;
-      margin-top: 0.5rem; font-family: monospace; font-size: 0.9rem;
+      background: white; border-radius: 10px; padding: 0.5rem 0.7rem;
+      margin-top: 0.4rem; font-family: monospace; font-size: 0.78rem;
       color: #1d4e7a; word-break: break-all;
     }
     #orderPaymentOptions {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 0.5rem; margin: 0.3rem 0 1rem;
+      display: grid; grid-template-columns: 1fr;
+      gap: 0.4rem; margin: 0.3rem 0 0.9rem;
     }
 
     .form-card {
-      flex: 2 1 400px; background: #f7faff; padding: 2rem;
-      border-radius: 30px; border: 1px solid #dce6f2;
+      flex: 1 1 100%; background: #f7faff; padding: 1.2rem 1rem;
+      border-radius: 20px; border: 1px solid #dce6f2;
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      min-width: 0;
     }
     .form-card:hover { border-color: #b3c9df; }
     .form-card label {
-      display: block; font-weight: 500; margin: 1rem 0 0.2rem;
-      font-size: 1rem;
+      display: block; font-weight: 500; margin: 0.85rem 0 0.2rem;
+      font-size: 0.88rem;
     }
     .form-card input, .form-card select, .form-card textarea {
-      width: 100%; padding: 0.8rem 1.2rem; border-radius: 30px;
+      width: 100%; padding: 0.65rem 1rem; border-radius: 30px;
       border: 1px solid #cdddee; background: white; font-family: inherit;
-      font-size: 1rem; margin-top: 0.2rem; transition: all 0.3s ease;
+      font-size: 0.92rem; margin-top: 0.15rem; transition: all 0.3s ease;
+      max-width: 100%;
     }
     .form-card input:focus, .form-card select:focus, .form-card textarea:focus {
       outline: none; border-color: #1d4e7a;
       box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.12);
     }
-    .form-card textarea { border-radius: 20px; resize: vertical; }
-    .form-row { display: flex; flex-wrap: wrap; gap: 1rem; }
-    .form-row label { flex: 1 1 160px; }
-    .form-status { margin-top: 0.8rem; font-weight: 500; color: #1d4e7a; font-size: 1rem; }
+    .form-card textarea { border-radius: 16px; resize: vertical; }
+    .form-row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .form-row label { flex: 1 1 140px; min-width: 0; }
+    .form-status { margin-top: 0.7rem; font-weight: 500; color: #1d4e7a; font-size: 0.88rem; }
 
     .questions {
-      display: flex; flex-wrap: wrap; gap: 2.5rem;
-      padding: 2.5rem; background: #eaf0f8;
-      border-radius: 40px; margin-top: 2rem;
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      padding: 1.5rem 1rem; background: #eaf0f8;
+      border-radius: 26px; margin-top: 1.5rem;
     }
-    .question-copy { flex: 1 1 280px; }
+    .question-copy { flex: 1 1 260px; min-width: 0; }
     .faq details {
-      background: white; padding: 0.8rem 1.2rem; border-radius: 40px;
-      margin: 0.6rem 0; border: 1px solid #d4e2f7; font-size: 1rem;
+      background: white; padding: 0.7rem 0.9rem; border-radius: 20px;
+      margin: 0.5rem 0; border: 1px solid #d4e2f7; font-size: 0.88rem;
       transition: all 0.3s ease;
     }
     .faq details:hover { border-color: #b3c9df; }
     .faq summary {
-      font-weight: 600; cursor: pointer; font-size: 1.05rem;
+      font-weight: 600; cursor: pointer; font-size: 0.92rem;
       transition: color 0.3s ease;
     }
     .faq summary:hover { color: #1d4e7a; }
-    .faq p { margin-top: 0.5rem; color: #1f3a57; }
+    .faq p { margin-top: 0.4rem; color: #1f3a57; font-size: 0.85rem; }
 
     /* ----- ACCOUNT ----- */
-    .account-grid { display: flex; flex-wrap: wrap; gap: 2rem; }
-    .account-grid .form-card { flex: 1 1 340px; }
+    .account-grid { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+    .account-grid .form-card { flex: 1 1 100%; }
     .account-panel {
-      flex: 1 1 280px; background: white; padding: 1.5rem;
-      border-radius: 30px; border: 1px solid #dce6f2; transition: all 0.3s ease;
+      flex: 1 1 100%; background: white; padding: 1rem;
+      border-radius: 20px; border: 1px solid #dce6f2; transition: all 0.3s ease;
+      min-width: 0;
     }
     .account-panel:hover { border-color: #b3c9df; }
     .account-header {
       display: flex; justify-content: space-between; align-items: center;
+      gap: 0.5rem; flex-wrap: wrap;
     }
+    .account-header h3 { font-size: 1rem; }
 
     /* ----- MODALS ----- */
     .modal-overlay {
-      position: fixed; inset: 0; background: rgba(0,0,0,0.3);
+      position: fixed; inset: 0; background: rgba(0,0,0,0.4);
       backdrop-filter: blur(3px); display: flex;
       align-items: center; justify-content: center; z-index: 200;
+      padding: 0.8rem;
       animation: fadeIn 0.3s ease;
     }
     @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -473,115 +490,120 @@
     }
     .modal-overlay.hidden { display: none; }
     .customer-modal {
-      background: white; max-width: 620px; width: 94%;
-      border-radius: 32px; padding: 2.2rem; position: relative;
-      max-height: 90vh; overflow-y: auto; animation: slideUp 0.3s ease;
+      background: white; max-width: 620px; width: 100%;
+      border-radius: 22px; padding: 1.4rem 1.1rem; position: relative;
+      max-height: 92vh; overflow-y: auto; animation: slideUp 0.3s ease;
     }
     .modal-close {
-      position: absolute; top: 0.8rem; right: 1.2rem;
-      background: none; border: none; font-size: 2.4rem;
+      position: absolute; top: 0.4rem; right: 0.7rem;
+      background: none; border: none; font-size: 1.8rem;
       cursor: pointer; color: #2f4a67; transition: all 0.3s ease;
+      line-height: 1;
     }
     .modal-close:hover { color: #c44536; transform: rotate(90deg); }
-    .product-detail-modal { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+    .product-detail-modal { display: flex; flex-wrap: wrap; gap: 1rem; }
     .product-detail-modal img {
-      flex: 1 1 180px; border-radius: 20px; background: #eef3f9;
+      flex: 1 1 100%; border-radius: 16px; background: #eef3f9;
       transition: transform 0.3s ease; object-fit: cover;
-      max-height: 260px;
+      max-height: 200px; width: 100%;
     }
     .product-detail-modal img:hover { transform: scale(1.02); }
-    .product-detail-modal > div { flex: 2 1 220px; }
-    .product-detail-modal h2 { font-size: 1.6rem; }
-    .product-detail-modal p { font-size: 1rem; }
+    .product-detail-modal > div { flex: 1 1 100%; min-width: 0; }
+    .product-detail-modal h2 { font-size: 1.2rem; }
+    .product-detail-modal p { font-size: 0.88rem; }
     .spec-grid {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 0.5rem 0.8rem; background: #f7faff;
-      padding: 0.8rem; border-radius: 20px;
-      margin: 0.8rem 0; font-size: 0.85rem;
+      gap: 0.4rem; background: #f7faff;
+      padding: 0.6rem; border-radius: 14px;
+      margin: 0.6rem 0; font-size: 0.75rem;
     }
     .spec-grid > span {
-      background: white; padding: 0.5rem 0.7rem;
-      border-radius: 12px; border: 1px solid #e2ebf5;
+      background: white; padding: 0.4rem 0.5rem;
+      border-radius: 10px; border: 1px solid #e2ebf5;
     }
     .spec-grid > span strong { color: #1d4e7a; }
     .spec-grid > span small { color: #2a6b9e; font-weight: 600; }
 
     .payment-options {
-      display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;
+      display: grid; grid-template-columns: 1fr; gap: 0.4rem;
     }
     .pay-option {
-      background: #f0f6fe; border-radius: 40px;
-      padding: 0.5rem 0.8rem; display: flex; align-items: center;
+      background: #f0f6fe; border-radius: 30px;
+      padding: 0.5rem 0.7rem; display: flex; align-items: center;
       gap: 0.4rem; border: 1px solid transparent;
-      transition: all 0.3s ease; cursor: pointer; font-size: 0.95rem;
+      transition: all 0.3s ease; cursor: pointer; font-size: 0.88rem;
     }
     .pay-option:hover {
-      border-color: #1d4e7a; background: #e2ebf5; transform: translateX(4px);
+      border-color: #1d4e7a; background: #e2ebf5;
     }
     .pay-option input { width: auto; margin: 0; }
 
     /* ----- CONTACT & FOOTER ----- */
     .contact-grid {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
-      gap: 1.5rem;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+      gap: 0.9rem;
     }
     .contact-card {
-      background: white; padding: 1.5rem; border-radius: 28px;
+      background: white; padding: 1rem 0.8rem; border-radius: 20px;
       border: 1px solid #dce6f2; text-align: center;
-      font-size: 1rem; transition: all 0.3s ease;
+      font-size: 0.88rem; transition: all 0.3s ease;
+      min-width: 0; word-wrap: break-word;
     }
     .contact-card:hover {
-      transform: translateY(-4px); box-shadow: 0 8px 24px rgba(0,20,40,0.06);
+      transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,20,40,0.06);
       border-color: #b3c9df;
     }
-    .contact-card span { font-size: 2.2rem; display: block; }
-    .contact-card h3 { margin: 0.5rem 0; }
+    .contact-card span { font-size: 1.7rem; display: block; }
+    .contact-card h3 { margin: 0.4rem 0; font-size: 0.98rem; }
+    .contact-card p { font-size: 0.85rem; word-break: break-word; }
+    .contact-card small { font-size: 0.72rem; }
     .contact-card a {
       color: #1d4e7a; font-weight: 600; transition: color 0.3s ease;
+      font-size: 0.85rem;
     }
     .contact-card a:hover { color: #0f3a5c; }
     footer {
-      background: #0b1a2e; color: #c9d9ec; padding: 2.5rem 2rem 1.5rem;
-      margin-top: 2rem; font-size: 1rem;
+      background: #0b1a2e; color: #c9d9ec; padding: 1.6rem 1rem 1.2rem;
+      margin-top: 1.5rem; font-size: 0.88rem;
     }
     .footer-main {
-      display: grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr));
-      gap: 2rem; max-width: 1200px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(140px,1fr));
+      gap: 1.2rem; max-width: 1200px; margin: 0 auto;
     }
     .footer-main a {
-      display: block; color: #b0c9e2; margin: 0.2rem 0;
-      font-size: 0.95rem; transition: all 0.3s ease;
+      display: block; color: #b0c9e2; margin: 0.15rem 0;
+      font-size: 0.85rem; transition: all 0.3s ease;
     }
     .footer-main a:hover { color: white; transform: translateX(4px); }
-    .footer-logo { font-size: 2rem; font-weight: 700; color: white; }
+    .footer-logo { font-size: 1.4rem; font-weight: 700; color: white; }
+    .footer-main h4 { font-size: 0.95rem; margin-bottom: 0.3rem; }
     .copyright {
       text-align: center; border-top: 1px solid #1f3a57;
-      padding-top: 1.2rem; margin-top: 1.5rem; font-size: 0.9rem;
+      padding-top: 1rem; margin-top: 1.2rem; font-size: 0.78rem;
     }
     .copyright a { transition: color 0.3s ease; }
     .copyright a:hover { color: white; }
 
     /* ----- WHATSAPP ----- */
     .whatsapp {
-      position: fixed; bottom: 1.5rem; right: 1.5rem;
-      background: #25D366; color: white; width: 58px; height: 58px;
+      position: fixed; bottom: 1rem; right: 1rem;
+      background: #25D366; color: white; width: 52px; height: 52px;
       border-radius: 50%; display: flex; align-items: center;
       justify-content: center; box-shadow: 0 6px 16px rgba(0,0,0,0.2);
       transition: all 0.3s ease; z-index: 50; text-decoration: none;
     }
     .whatsapp:hover {
-      transform: scale(1.1) rotate(-5deg);
+      transform: scale(1.08) rotate(-5deg);
       box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
     }
-    .whatsapp svg { width: 34px; height: 34px; fill: white; }
+    .whatsapp svg { width: 30px; height: 30px; fill: white; }
 
     /* ----- PHONE WITH CODE ----- */
-    .phone-with-code { display: flex; gap: 0.5rem; align-items: center; }
+    .phone-with-code { display: flex; flex-direction: column; gap: 0.4rem; }
     .phone-with-code select {
-      width: auto; min-width: 100px; flex-shrink: 0;
-      padding: 0.8rem 0.6rem; border-radius: 30px;
+      width: 100%; padding: 0.65rem 0.8rem; border-radius: 30px;
       border: 1px solid #cdddee; background: white;
-      font-family: inherit; font-size: 0.95rem;
+      font-family: inherit; font-size: 0.9rem;
       transition: all 0.3s ease;
     }
     .phone-with-code select:focus {
@@ -589,9 +611,9 @@
       box-shadow: 0 0 0 3px rgba(29, 78, 122, 0.12);
     }
     .phone-with-code input {
-      flex: 1; padding: 0.8rem 1.2rem; border-radius: 30px;
+      width: 100%; padding: 0.65rem 1rem; border-radius: 30px;
       border: 1px solid #cdddee; background: white;
-      font-family: inherit; font-size: 1rem;
+      font-family: inherit; font-size: 0.92rem;
       transition: all 0.3s ease;
     }
     .phone-with-code input:focus {
@@ -602,8 +624,8 @@
     /* ----- ADMIN DASHBOARD ----- */
     .dashboard-section {
       background: #0b1a2e; color: #e2ebf5;
-      padding: 2.5rem 2rem; border-radius: 40px 40px 0 0;
-      margin-top: 2rem;
+      padding: 1.6rem 1rem; border-radius: 26px 26px 0 0;
+      margin-top: 1.5rem;
     }
     .dashboard-section .section-heading h2,
     .dashboard-section .section-heading p { color: #ffffff; }
@@ -611,17 +633,20 @@
 
     .dashboard-header {
       display: flex; justify-content: space-between;
-      align-items: flex-start; flex-wrap: wrap; gap: 1rem;
-      margin-bottom: 1.5rem;
+      align-items: flex-start; flex-wrap: wrap; gap: 0.8rem;
+      margin-bottom: 1.2rem;
     }
+    .dashboard-header h2 { font-size: 1.5rem; }
+    .dashboard-header p { font-size: 0.88rem; }
     .admin-logout-btn {
       background: linear-gradient(135deg, #c44536, #a83232);
       color: white; border: 2px solid #e86b5a;
-      padding: 0.7rem 1.6rem; border-radius: 30px;
-      font-weight: 700; font-size: 1rem; cursor: pointer;
+      padding: 0.55rem 1.2rem; border-radius: 30px;
+      font-weight: 700; font-size: 0.88rem; cursor: pointer;
       transition: all 0.3s ease;
-      display: inline-flex; align-items: center; gap: 0.5rem;
+      display: inline-flex; align-items: center; gap: 0.4rem;
       box-shadow: 0 4px 12px rgba(168, 50, 50, 0.35);
+      white-space: nowrap;
     }
     .admin-logout-btn:hover {
       background: linear-gradient(135deg, #e86b5a, #c44536);
@@ -633,68 +658,75 @@
 
     .dashboard-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem; margin: 2rem 0;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 0.9rem; margin: 1.2rem 0;
     }
     .dash-card {
-      background: #13263f; border-radius: 28px;
-      padding: 1.6rem 1.5rem; border: 1px solid #1f3a57;
+      background: #13263f; border-radius: 20px;
+      padding: 1rem 0.9rem; border: 1px solid #1f3a57;
       transition: all 0.3s ease; color: #e2ebf5;
+      min-width: 0;
     }
     .dash-card:hover {
       border-color: #4a7ea8; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      transform: translateY(-4px);
+      transform: translateY(-3px);
     }
     .dash-card h3 {
-      font-size: 1.25rem; color: #ffffff;
-      margin-bottom: 1rem; font-weight: 600;
+      font-size: 1rem; color: #ffffff;
+      margin-bottom: 0.7rem; font-weight: 600;
     }
     .dash-card .dash-value {
-      font-size: 2.2rem; font-weight: 800;
-      color: #8ab3d9; line-height: 1.2;
+      font-size: 1.5rem; font-weight: 800;
+      color: #8ab3d9; line-height: 1.15;
+      word-break: break-word;
     }
     .dash-card .dash-label {
-      font-size: 0.95rem; color: #b0c9e2;
-      letter-spacing: 1px; text-transform: uppercase;
+      font-size: 0.72rem; color: #b0c9e2;
+      letter-spacing: 0.6px; text-transform: uppercase;
       font-weight: 500;
     }
-    .dash-card ul { list-style: none; margin-top: 0.8rem; }
+    .dash-card ul { list-style: none; margin-top: 0.6rem; }
     .dash-card ul li {
       display: flex; justify-content: space-between;
-      padding: 0.4rem 0; border-bottom: 1px solid #1f3a57;
-      font-size: 0.95rem; color: #cdd9e9;
+      padding: 0.35rem 0; border-bottom: 1px solid #1f3a57;
+      font-size: 0.85rem; color: #cdd9e9;
+      gap: 0.4rem;
     }
     .dash-card ul li:last-child { border-bottom: none; }
     .dash-card ul li span:last-child { color: #ffffff; font-weight: 600; }
 
     .dash-flex {
-      display: flex; flex-wrap: wrap; gap: 2rem;
+      display: flex; flex-wrap: wrap; gap: 1rem;
       justify-content: space-between; align-items: flex-start;
     }
-    .dash-flex > * { flex: 1 1 260px; }
+    .dash-flex > * { flex: 1 1 100%; }
 
     .dash-table {
       width: 100%; border-collapse: collapse;
-      margin-top: 0.8rem; font-size: 0.9rem;
+      margin-top: 0.6rem; font-size: 0.78rem;
+      display: block; overflow-x: auto;
+      white-space: nowrap;
     }
+    .dash-table thead, .dash-table tbody { display: table; width: 100%; }
     .dash-table th {
-      text-align: left; padding: 0.5rem 0.4rem;
+      text-align: left; padding: 0.4rem 0.35rem;
       border-bottom: 1px solid #1f3a57; color: #8ab3d9;
       font-weight: 500; text-transform: uppercase;
-      font-size: 0.72rem; letter-spacing: 1px;
+      font-size: 0.62rem; letter-spacing: 0.6px;
     }
     .dash-table td {
-      padding: 0.6rem 0.4rem; border-bottom: 1px solid #1a2f47;
+      padding: 0.5rem 0.35rem; border-bottom: 1px solid #1a2f47;
       color: #e2ebf5; vertical-align: top;
     }
     .dash-table tr:last-child td { border-bottom: none; }
 
     .status-badge {
       background: #1d4e7a; color: white;
-      padding: 0.15rem 0.8rem; border-radius: 30px;
-      font-size: 0.72rem; font-weight: 600;
+      padding: 0.12rem 0.55rem; border-radius: 30px;
+      font-size: 0.62rem; font-weight: 600;
       display: inline-block; cursor: pointer;
       transition: all 0.3s ease;
+      white-space: nowrap;
     }
     .status-badge:hover { transform: scale(1.05); }
     .status-badge.green { background: #1d7a4e; }
@@ -702,8 +734,8 @@
     .status-badge.red { background: #a83232; }
 
     .pay-badge {
-      display: inline-block; padding: 0.15rem 0.65rem;
-      border-radius: 20px; font-size: 0.72rem;
+      display: inline-block; padding: 0.12rem 0.5rem;
+      border-radius: 20px; font-size: 0.62rem;
       font-weight: 600; white-space: nowrap;
     }
     .pay-badge.mtn    { background: #ffd60a; color: #3a2e00; }
@@ -716,13 +748,14 @@
     .total-cell { font-weight: 700; color: #8ab3d9; white-space: nowrap; }
 
     .order-filter-tabs {
-      display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 1rem 0 0.5rem;
+      display: flex; flex-wrap: wrap; gap: 0.3rem; margin: 0.8rem 0 0.4rem;
     }
     .order-tab {
       background: transparent; border: 1px solid #2a4a6b;
-      color: #8ab3d9; padding: 0.35rem 0.9rem; border-radius: 30px;
-      font-size: 0.8rem; font-weight: 500; cursor: pointer;
+      color: #8ab3d9; padding: 0.3rem 0.7rem; border-radius: 30px;
+      font-size: 0.72rem; font-weight: 500; cursor: pointer;
       transition: all 0.25s ease;
+      white-space: nowrap;
     }
     .order-tab:hover { background: #1a2f47; color: white; }
     .order-tab.active {
@@ -731,113 +764,112 @@
 
     .payment-breakdown {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem; margin-top: 0.8rem;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 0.7rem; margin-top: 0.6rem;
     }
     .pay-stat {
       background: #0f1f33; border: 1px solid #1f3a57;
-      border-radius: 20px; padding: 1rem; transition: all 0.3s ease;
+      border-radius: 16px; padding: 0.8rem; transition: all 0.3s ease;
     }
     .pay-stat:hover { border-color: #4a7ea8; transform: translateY(-2px); }
     .pay-stat .pay-stat-label {
-      font-size: 0.8rem; color: #8ab3d9;
-      text-transform: uppercase; letter-spacing: 1px;
-      display: flex; align-items: center; gap: 0.4rem;
+      font-size: 0.7rem; color: #8ab3d9;
+      text-transform: uppercase; letter-spacing: 0.6px;
+      display: flex; align-items: center; gap: 0.3rem;
     }
     .pay-stat .pay-stat-amount {
-      font-size: 1.35rem; font-weight: 800;
-      color: white; margin-top: 0.4rem;
+      font-size: 1.05rem; font-weight: 800;
+      color: white; margin-top: 0.3rem;
+      word-break: break-word;
     }
     .pay-stat .pay-stat-count {
-      font-size: 0.85rem; color: #8ab3d9; margin-top: 0.2rem;
+      font-size: 0.75rem; color: #8ab3d9; margin-top: 0.15rem;
     }
 
-    .dashboard-section .note { color: #8ab3d9; font-size: 0.9rem; }
+    .dashboard-section .note { color: #8ab3d9; font-size: 0.82rem; }
     .dash-card .action-btn {
       background: #1d4e7a; color: white; border: none;
-      padding: 0.5rem 1.1rem; border-radius: 30px;
-      font-weight: 500; font-size: 0.85rem;
+      padding: 0.4rem 0.9rem; border-radius: 30px;
+      font-weight: 500; font-size: 0.78rem;
       cursor: pointer; transition: all 0.3s ease;
-      margin-top: 0.5rem; margin-right: 0.4rem;
+      margin-top: 0.4rem; margin-right: 0.3rem;
       display: inline-block; text-decoration: none;
+      white-space: nowrap;
     }
     .dash-card .action-btn:hover {
       background: #2a6b9e; transform: translateY(-2px);
       box-shadow: 0 6px 16px rgba(42, 107, 158, 0.4);
     }
     .no-orders-msg {
-      color: #8ab3d9; font-style: italic; padding: 1rem 0;
+      color: #8ab3d9; font-style: italic; padding: 0.8rem 0;
+      font-size: 0.85rem;
     }
     .order-row-actions button {
       background: transparent; border: 1px solid #4a7ea8;
-      color: #8ab3d9; padding: 0.2rem 0.6rem;
-      border-radius: 20px; font-size: 0.75rem;
+      color: #8ab3d9; padding: 0.15rem 0.5rem;
+      border-radius: 20px; font-size: 0.68rem;
       cursor: pointer; transition: all 0.2s ease;
-      margin-right: 0.3rem;
+      margin-right: 0.2rem;
     }
     .order-row-actions button:hover {
       background: #1d4e7a; color: white; border-color: #1d4e7a;
     }
 
-    /* ---------- INVENTORY PANEL (now correctly at top level) ---------- */
+    /* ---------- INVENTORY PANEL ---------- */
     .inventory-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-      font-size: 0.9rem;
+      width: 100%; border-collapse: collapse;
+      margin-top: 0.8rem; font-size: 0.78rem;
+      display: block; overflow-x: auto;
+      white-space: nowrap;
     }
+    .inventory-table thead, .inventory-table tbody { display: table; width: 100%; }
     .inventory-table th {
-      text-align: left;
-      padding: 0.6rem 0.5rem;
+      text-align: left; padding: 0.5rem 0.4rem;
       border-bottom: 1px solid #1f3a57;
-      color: #8ab3d9;
-      font-weight: 500;
-      text-transform: uppercase;
-      font-size: 0.7rem;
-      letter-spacing: 1px;
+      color: #8ab3d9; font-weight: 500;
+      text-transform: uppercase; font-size: 0.62rem;
+      letter-spacing: 0.6px;
     }
     .inventory-table td {
-      padding: 0.7rem 0.5rem;
+      padding: 0.55rem 0.4rem;
       border-bottom: 1px solid #1a2f47;
-      color: #e2ebf5;
-      vertical-align: middle;
+      color: #e2ebf5; vertical-align: middle;
     }
     .inventory-table tr:hover { background: #13263f; }
 
     .inv-thumb {
-      width: 42px; height: 42px; border-radius: 10px;
+      width: 36px; height: 36px; border-radius: 8px;
       object-fit: cover; background: #0f1f33;
       border: 1px solid #1f3a57;
     }
-    .inv-name { font-weight: 600; color: #ffffff; }
+    .inv-name { font-weight: 600; color: #ffffff; font-size: 0.82rem; }
     .inv-brand {
-      font-size: 0.7rem; color: #8ab3d9;
-      text-transform: uppercase; letter-spacing: 1px;
+      font-size: 0.6rem; color: #8ab3d9;
+      text-transform: uppercase; letter-spacing: 0.6px;
       font-weight: 600;
     }
     .inv-price { color: #8ab3d9; font-weight: 600; white-space: nowrap; }
 
     .stock-pill {
-      display: inline-flex; align-items: center; gap: 0.35rem;
-      padding: 0.25rem 0.75rem; border-radius: 30px;
-      font-weight: 700; font-size: 0.85rem;
-      min-width: 55px; justify-content: center;
+      display: inline-flex; align-items: center; gap: 0.3rem;
+      padding: 0.18rem 0.6rem; border-radius: 30px;
+      font-weight: 700; font-size: 0.72rem;
+      min-width: 48px; justify-content: center;
+      white-space: nowrap;
     }
     .stock-pill.ok      { background: #1d7a4e; color: white; }
     .stock-pill.low     { background: #b86b1d; color: white; }
     .stock-pill.critical{ background: #a83232; color: white; }
     .stock-pill.out     { background: #3a3a3a; color: #bbb; }
 
-    .inv-actions {
-      display: flex; gap: 0.3rem; flex-wrap: wrap;
-    }
+    .inv-actions { display: flex; gap: 0.25rem; flex-wrap: wrap; }
     .inv-actions button {
       background: transparent;
       border: 1px solid #4a7ea8;
       color: #8ab3d9;
-      padding: 0.25rem 0.7rem;
+      padding: 0.2rem 0.55rem;
       border-radius: 20px;
-      font-size: 0.75rem;
+      font-size: 0.68rem;
       cursor: pointer;
       transition: all 0.2s ease;
       font-weight: 500;
@@ -861,37 +893,33 @@
 
     .low-stock-item {
       display: flex; justify-content: space-between;
-      align-items: center; padding: 0.5rem 0;
+      align-items: center; padding: 0.4rem 0;
       border-bottom: 1px solid #1f3a57;
-      font-size: 0.9rem;
+      font-size: 0.82rem; gap: 0.4rem;
     }
     .low-stock-item:last-child { border-bottom: none; }
     .low-stock-item .ls-name { color: #e2ebf5; }
     .low-stock-item .ls-count {
       background: #b86b1d; color: white;
-      padding: 0.15rem 0.7rem; border-radius: 20px;
-      font-size: 0.75rem; font-weight: 700;
+      padding: 0.12rem 0.55rem; border-radius: 20px;
+      font-size: 0.68rem; font-weight: 700;
+      white-space: nowrap;
     }
     .low-stock-item .ls-count.critical { background: #a83232; }
 
     /* ----- RESPONSIVE ----- */
-    @media (max-width: 900px) {
-      .header { padding: 0.8rem 1rem; }
-    }
-
     @media (max-width: 800px) {
-      .topbar .toplinks span { margin-left: 0.8rem; }
       .menu-btn { display: block; }
       nav {
         position: fixed;
         top: 0; right: 0;
         height: 100vh; height: 100dvh;
-        width: min(320px, 82vw);
+        width: min(300px, 82vw);
         background: #ffffff;
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        padding: 5rem 1.2rem 2rem;
+        padding: 4.5rem 1rem 1.5rem;
         box-shadow: -8px 0 30px rgba(0,0,0,0.15);
         transform: translateX(105%);
         transition: transform 0.32s cubic-bezier(0.2, 0.9, 0.4, 1);
@@ -901,11 +929,11 @@
       nav.open { transform: translateX(0); }
       nav a {
         width: 100%;
-        padding: 1rem 0.8rem;
-        font-size: 1.05rem;
+        padding: 0.85rem 0.7rem;
+        font-size: 0.98rem;
         font-weight: 600;
         border-bottom: 1px solid #e2ebf5;
-        border-radius: 12px;
+        border-radius: 10px;
         color: #1f3a57;
       }
       nav a:hover, nav a:active {
@@ -917,34 +945,27 @@
       nav a:last-child { border-bottom: none; }
       .nav-cta { display: none; }
 
-      .hero { padding: 1.5rem 1rem; }
-      .hero-copy h1 { font-size: 2.2rem; }
-      .section { padding: 1.5rem 1rem; }
-      .order-section, .questions { padding: 1.5rem 1rem; }
-      .product-grid { grid-template-columns: repeat(auto-fill, minmax(170px,1fr)); }
-      .split { flex-direction: column; align-items: stretch; }
-      .site-search { width: 100%; }
-      .account-grid { flex-direction: column; }
-      .phone-with-code { flex-direction: column; align-items: stretch; }
-      .phone-with-code select { width: 100%; }
-      .dashboard-section { padding: 1.5rem 1rem; }
-      .dashboard-grid { grid-template-columns: 1fr; }
-      #orderPaymentOptions { grid-template-columns: 1fr; }
-      .inventory-table th:nth-child(3),
-      .inventory-table td:nth-child(3) { display: none; }
-      .inventory-table { font-size: 0.8rem; }
+      .section { padding: 1.5rem 0.9rem; }
+      .order-section, .questions { padding: 1.2rem 0.9rem; }
     }
 
     @media (max-width: 480px) {
-      .topbar { flex-direction: column; align-items: center; gap: 0.2rem; }
-      .trust-row { flex-direction: column; gap: 0.3rem; }
+      .topbar { flex-direction: column; align-items: center; text-align: center; }
+      .toplinks { justify-content: center; }
+      .trust-row { flex-direction: column; gap: 0.25rem; }
       .hero-actions .btn { width: 100%; text-align: center; }
-      .hero-copy h1 { font-size: 1.9rem; }
-      .section-heading h2 { font-size: 1.8rem; }
-      .customer-modal { padding: 1.6rem 1.2rem; }
-      .inventory-table { font-size: 0.75rem; }
-      .inventory-table th:nth-child(3),
-      .inventory-table td:nth-child(3) { display: none; }
+      .hero-copy h1 { font-size: 1.7rem; }
+      .section-heading h2 { font-size: 1.4rem; }
+      .section-heading p { font-size: 0.9rem; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 0.7rem; }
+      .product h3 { font-size: 0.85rem; }
+      .product p { font-size: 0.72rem; }
+      .price { font-size: 0.82rem; }
+      .small-btn { padding: 0.3rem 0.7rem; font-size: 0.68rem; }
+      .product-image { height: 100px; }
+      .customer-modal { padding: 1.2rem 0.9rem; }
+      .dash-card .dash-value { font-size: 1.3rem; }
+      .spec-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -981,7 +1002,6 @@
     <button class="nav-cta" id="headerOrderBtn">Order Now</button>
   </header>
 
-  <!-- Mobile nav backdrop overlay -->
   <div class="nav-overlay" id="navOverlay"></div>
 
   <main>
@@ -1017,18 +1037,18 @@
         <h2>Technology that works for you.</h2>
         <p>For To You is a Kampala-based computer and laptop business focused on helping customers find the right technology for school, work, business, design, programming, gaming and everyday use.</p>
       </div>
-      <div class="about-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1.5rem;">
-        <article class="info-card" style="background:white;padding:1.5rem;border-radius:28px;border:1px solid #dce6f2;">
-          <div style="font-size:2.2rem;">🎯</div><h3>Our Mission</h3><p>Make reliable technology easier to find, understand and buy at competitive prices.</p>
+      <div class="about-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:0.9rem;">
+        <article class="info-card" style="background:white;padding:1rem;border-radius:20px;border:1px solid #dce6f2;">
+          <div style="font-size:1.8rem;">🎯</div><h3 style="font-size:1rem;">Our Mission</h3><p style="font-size:0.85rem;">Make reliable technology easier to find, understand and buy at competitive prices.</p>
         </article>
-        <article class="info-card" style="background:white;padding:1.5rem;border-radius:28px;border:1px solid #dce6f2;">
-          <div style="font-size:2.2rem;">🤝</div><h3>Customer First</h3><p>We help customers choose equipment according to their needs and budget.</p>
+        <article class="info-card" style="background:white;padding:1rem;border-radius:20px;border:1px solid #dce6f2;">
+          <div style="font-size:1.8rem;">🤝</div><h3 style="font-size:1rem;">Customer First</h3><p style="font-size:0.85rem;">We help customers choose equipment according to their needs and budget.</p>
         </article>
-        <article class="info-card" style="background:white;padding:1.5rem;border-radius:28px;border:1px solid #dce6f2;">
-          <div style="font-size:2.2rem;">🚚</div><h3>Convenient Delivery</h3><p>Ask about delivery options in Kampala and other parts of Uganda.</p>
+        <article class="info-card" style="background:white;padding:1rem;border-radius:20px;border:1px solid #dce6f2;">
+          <div style="font-size:1.8rem;">🚚</div><h3 style="font-size:1rem;">Convenient Delivery</h3><p style="font-size:0.85rem;">Ask about delivery options in Kampala and other parts of Uganda.</p>
         </article>
-        <article class="info-card" style="background:white;padding:1.5rem;border-radius:28px;border:1px solid #dce6f2;">
-          <div style="font-size:2.2rem;">🛠️</div><h3>After-Sale Support</h3><p>Need help with your new device? Contact our team for guidance and support.</p>
+        <article class="info-card" style="background:white;padding:1rem;border-radius:20px;border:1px solid #dce6f2;">
+          <div style="font-size:1.8rem;">🛠️</div><h3 style="font-size:1rem;">After-Sale Support</h3><p style="font-size:0.85rem;">Need help with your new device? Contact our team for guidance and support.</p>
         </article>
       </div>
     </section>
@@ -1064,7 +1084,7 @@
           </div>
           <span class="tag">Laptop</span>
           <h3>Student Laptop</h3>
-          <p>Affordable laptops for classes, browsing and everyday work. HP · Dell · Lenovo · Mac.</p>
+          <p>Affordable laptops for classes, browsing and everyday work.</p>
           <strong class="price">From UGX 850,000</strong>
           <button class="small-btn details-product" data-product="Student Laptop">Details</button>
           <button class="small-btn order-product" data-product="Student Laptop">Order</button>
@@ -1080,7 +1100,7 @@
           </div>
           <span class="tag">Laptop</span>
           <h3>Business Laptop</h3>
-          <p>Professional laptops for offices and entrepreneurs. HP · Dell · Lenovo · Mac.</p>
+          <p>Professional laptops for offices and entrepreneurs.</p>
           <strong class="price">From UGX 1,800,000</strong>
           <button class="small-btn details-product" data-product="Business Laptop">Details</button>
           <button class="small-btn order-product" data-product="Business Laptop">Order</button>
@@ -1096,7 +1116,7 @@
           </div>
           <span class="tag">Gaming</span>
           <h3>Gaming PC</h3>
-          <p>High-performance machines for gaming and streaming. HP · Dell · Custom builds.</p>
+          <p>High-performance machines for gaming and streaming.</p>
           <strong class="price">From UGX 2,800,000</strong>
           <button class="small-btn details-product" data-product="Gaming PC">Details</button>
           <button class="small-btn order-product" data-product="Gaming PC">Order</button>
@@ -1112,7 +1132,7 @@
           </div>
           <span class="tag">Desktop</span>
           <h3>Office Desktop</h3>
-          <p>Complete desktop systems for offices and homes. HP · Dell · Lenovo.</p>
+          <p>Complete desktop systems for offices and homes.</p>
           <strong class="price">From UGX 1,200,000</strong>
           <button class="small-btn details-product" data-product="Office Desktop">Details</button>
           <button class="small-btn order-product" data-product="Office Desktop">Order</button>
@@ -1128,7 +1148,7 @@
           </div>
           <span class="tag">Monitor</span>
           <h3>LED Monitor</h3>
-          <p>Full HD and 4K monitors for work and play. HP · Dell · Samsung · LG.</p>
+          <p>Full HD and 4K monitors for work and play.</p>
           <strong class="price">From UGX 450,000</strong>
           <button class="small-btn details-product" data-product="LED Monitor">Details</button>
           <button class="small-btn order-product" data-product="LED Monitor">Order</button>
@@ -1144,7 +1164,7 @@
           </div>
           <span class="tag">Accessory</span>
           <h3>Computer Accessories</h3>
-          <p>Keyboards, mice, bags and headsets. Logitech · HP · Dell.</p>
+          <p>Keyboards, mice, bags and headsets.</p>
           <strong class="price">From UGX 25,000</strong>
           <button class="small-btn details-product" data-product="Computer Accessories">Details</button>
           <button class="small-btn order-product" data-product="Computer Accessories">Order</button>
@@ -1154,7 +1174,7 @@
     </section>
 
     <!-- VIDEOS -->
-    <section class="video-section" id="videos" style="padding:2.5rem 2rem;max-width:1280px;margin:0 auto;">
+    <section class="section" id="videos">
       <div class="section-heading">
         <p class="eyebrow">PRODUCT VIDEOS</p>
         <h2>See what we offer.</h2>
@@ -1177,7 +1197,6 @@
           <p>A real HP EliteBook review that can help customers understand the business-laptop category.</p>
         </article>
       </div>
-      <p class="note center" style="text-align:center;">These videos are embedded from YouTube. Replace them with your own shop/product videos when you have them.</p>
     </section>
 
     <!-- ORDER -->
@@ -1227,28 +1246,27 @@
           </label>
         </div>
 
-        <div class="form-row">
-          <label>Full Name
-            <input name="name" id="orderName" required placeholder="Your full name">
-          </label>
-          <label>Phone Number
-            <div class="phone-with-code">
-              <select id="orderPhoneCode" name="phoneCode">
-                <option value="+256">🇺🇬 +256</option>
-                <option value="+1">🇺🇸 +1</option>
-                <option value="+44">🇬🇧 +44</option>
-                <option value="+91">🇮🇳 +91</option>
-                <option value="+254">🇰🇪 +254</option>
-                <option value="+255">🇹🇿 +255</option>
-                <option value="+250">🇷🇼 +250</option>
-                <option value="+27">🇿🇦 +27</option>
-                <option value="+234">🇳🇬 +234</option>
-                <option value="+971">🇦🇪 +971</option>
-              </select>
-              <input type="tel" name="phone" id="orderPhone" required placeholder="Phone number">
-            </div>
-          </label>
-        </div>
+        <label>Full Name
+          <input name="name" id="orderName" required placeholder="Your full name">
+        </label>
+
+        <label>Phone Number
+          <div class="phone-with-code">
+            <select id="orderPhoneCode" name="phoneCode">
+              <option value="+256">🇺🇬 +256</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+91">🇮🇳 +91</option>
+              <option value="+254">🇰🇪 +254</option>
+              <option value="+255">🇹🇿 +255</option>
+              <option value="+250">🇷🇼 +250</option>
+              <option value="+27">🇿🇦 +27</option>
+              <option value="+234">🇳🇬 +234</option>
+              <option value="+971">🇦🇪 +971</option>
+            </select>
+            <input type="tel" name="phone" id="orderPhone" required placeholder="Phone number">
+          </div>
+        </label>
 
         <label>Email (optional)
           <input type="email" name="email" id="orderEmail" placeholder="you@example.com">
@@ -1326,7 +1344,7 @@
           </label>
         </div>
         <label>Your Question
-          <textarea name="question" id="questionText" rows="6" required placeholder="Type your question here..."></textarea>
+          <textarea name="question" id="questionText" rows="5" required placeholder="Type your question here..."></textarea>
         </label>
         <button class="btn dark full" type="submit">Send Question</button>
         <p class="form-status" id="questionStatus"></p>
@@ -1342,7 +1360,7 @@
       </div>
       <div class="account-grid">
         <form id="accountForm" class="form-card">
-          <h3 id="accountTitle">Create Account</h3>
+          <h3 id="accountTitle" style="font-size:1.05rem;">Create Account</h3>
           <label>Full Name<input id="accountName" required placeholder="Your full name"></label>
           <label>Email<input id="accountEmail" type="email" required placeholder="you@example.com"></label>
           <label>Phone
@@ -1367,7 +1385,7 @@
         </form>
         <div class="account-panel">
           <div class="account-header"><h3>My Orders</h3><button id="accountLogout" class="small-btn">Log Out</button></div>
-          <div id="accountOrders"><p>Sign in to see your orders.</p></div>
+          <div id="accountOrders"><p style="font-size:0.85rem;">Sign in to see your orders.</p></div>
         </div>
       </div>
     </section>
@@ -1378,7 +1396,7 @@
         <div>
           <p class="eyebrow">ADMIN DASHBOARD</p>
           <h2>Business overview</h2>
-          <p>Monitor sales, stock, recent orders and customer activity at a glance. All customer orders appear here in real-time.</p>
+          <p>Monitor sales, stock, recent orders and customer activity at a glance.</p>
         </div>
         <button id="adminLogoutBtn" class="admin-logout-btn">🚪 Log Out</button>
       </div>
@@ -1387,22 +1405,22 @@
         <div class="dash-card">
           <div class="dash-label">Total Sales (UGX)</div>
           <div class="dash-value" id="dashTotalSales">0</div>
-          <div style="color: #8ab3d9; font-size: 0.9rem; margin-top: 0.3rem;">From all completed orders</div>
+          <div style="color: #8ab3d9; font-size: 0.75rem; margin-top: 0.25rem;">From completed orders</div>
         </div>
         <div class="dash-card">
           <div class="dash-label">Orders</div>
           <div class="dash-value" id="dashOrderCount">0</div>
-          <div style="color: #8ab3d9; font-size: 0.9rem; margin-top: 0.3rem;" id="dashOrderBreakdown">0 pending · 0 completed</div>
+          <div style="color: #8ab3d9; font-size: 0.75rem; margin-top: 0.25rem;" id="dashOrderBreakdown">0 pending · 0 completed</div>
         </div>
         <div class="dash-card">
           <div class="dash-label">Customers</div>
           <div class="dash-value" id="dashCustomerCount">0</div>
-          <div style="color: #8ab3d9; font-size: 0.9rem; margin-top: 0.3rem;">Unique customers with orders</div>
+          <div style="color: #8ab3d9; font-size: 0.75rem; margin-top: 0.25rem;">Unique customers</div>
         </div>
         <div class="dash-card">
           <div class="dash-label">Products in stock</div>
           <div class="dash-value" id="dashProductCount">0</div>
-          <div style="color: #8ab3d9; font-size: 0.9rem; margin-top: 0.3rem;" id="dashLowStockBreakdown">0 low stock items</div>
+          <div style="color: #8ab3d9; font-size: 0.75rem; margin-top: 0.25rem;" id="dashLowStockBreakdown">0 low stock items</div>
         </div>
 
         <div class="dash-card" style="grid-column: 1 / -1;">
@@ -1414,12 +1432,12 @@
       </div>
 
       <!-- INVENTORY MANAGEMENT -->
-      <div class="dash-card" style="margin-top: 2rem;">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
-          <h3 style="margin:0;">📦 Inventory Management</h3>
-          <div style="display:flex; flex-wrap:wrap; gap:0.4rem;">
-            <input type="search" id="inventorySearchInput" class="site-search" placeholder="🔎 Search product or brand..." style="background:#0f1f33; color:#e2ebf5; border-color:#1f3a57; padding:0.5rem 1rem; font-size:0.9rem; min-width:200px;">
-            <select id="inventoryCategoryFilter" style="background:#0f1f33; color:#e2ebf5; border:1px solid #1f3a57; padding:0.5rem 0.9rem; border-radius:30px; font-size:0.9rem;">
+      <div class="dash-card" style="margin-top: 1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.8rem;">
+          <h3 style="margin:0; font-size:1.05rem;">📦 Inventory Management</h3>
+          <div style="display:flex; flex-wrap:wrap; gap:0.4rem; width:100%;">
+            <input type="search" id="inventorySearchInput" class="site-search" placeholder="🔎 Search..." style="background:#0f1f33; color:#e2ebf5; border-color:#1f3a57; padding:0.5rem 0.9rem; font-size:0.85rem; flex:1 1 160px;">
+            <select id="inventoryCategoryFilter" style="background:#0f1f33; color:#e2ebf5; border:1px solid #1f3a57; padding:0.5rem 0.8rem; border-radius:30px; font-size:0.85rem; flex:1 1 140px;">
               <option value="all">All Categories</option>
               <option value="Student Laptop">Student Laptop</option>
               <option value="Business Laptop">Business Laptop</option>
@@ -1428,7 +1446,7 @@
               <option value="LED Monitor">LED Monitor</option>
               <option value="Computer Accessories">Computer Accessories</option>
             </select>
-            <button class="action-btn" id="openAddProductModal" style="background:#1d7a4e;">➕ Add New Product</button>
+            <button class="action-btn" id="openAddProductModal" style="background:#1d7a4e;">➕ Add</button>
             <button class="action-btn" id="refreshInventoryBtn">🔄 Refresh</button>
           </div>
         </div>
@@ -1438,13 +1456,13 @@
       </div>
 
       <!-- CUSTOMER QUESTIONS -->
-      <div class="dash-card" style="margin-top: 2rem;">
-        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:1rem;">
-          <h3 style="margin:0;">💬 Customer Questions</h3>
-          <div>
-            <button class="action-btn" id="refreshQuestionsBtn">🔄 Refresh</button>
-            <button class="action-btn" id="filterUnansweredBtn" style="background:#b86b1d;">⏳ Show Unanswered</button>
-            <button class="action-btn" id="filterAllQuestionsBtn" style="background:#1d4e7a;">📋 Show All</button>
+      <div class="dash-card" style="margin-top: 1.5rem;">
+        <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.8rem;">
+          <h3 style="margin:0; font-size:1.05rem;">💬 Customer Questions</h3>
+          <div style="display:flex; flex-wrap:wrap; gap:0.3rem;">
+            <button class="action-btn" id="refreshQuestionsBtn">🔄</button>
+            <button class="action-btn" id="filterUnansweredBtn" style="background:#b86b1d;">⏳ Unanswered</button>
+            <button class="action-btn" id="filterAllQuestionsBtn" style="background:#1d4e7a;">📋 All</button>
           </div>
         </div>
         <div id="dashboardQuestionsContainer">
@@ -1452,49 +1470,47 @@
         </div>
       </div>
 
-      <div class="dash-flex" style="margin-top: 2rem;">
-        <div class="dash-card" style="flex: 1 1 500px;">
+      <div class="dash-flex" style="margin-top: 1.5rem;">
+        <div class="dash-card">
           <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
-            <h3 style="margin-bottom:0;">Recent Orders</h3>
-            <div>
-              <button class="action-btn" id="refreshOrdersBtn">🔄 Refresh</button>
-              <button class="action-btn" id="clearOrdersBtn" style="background:#a83232;">🗑 Clear All</button>
+            <h3 style="margin-bottom:0; font-size:1.05rem;">Recent Orders</h3>
+            <div style="display:flex; gap:0.3rem;">
+              <button class="action-btn" id="refreshOrdersBtn">🔄</button>
+              <button class="action-btn" id="clearOrdersBtn" style="background:#a83232;">🗑</button>
             </div>
           </div>
 
           <div class="order-filter-tabs" id="orderFilterTabs">
             <button class="order-tab active" data-status="all">All</button>
             <button class="order-tab" data-status="Pending">⏳ Pending</button>
-            <button class="order-tab" data-status="Awaiting Payment">💳 Awaiting Payment</button>
-            <button class="order-tab" data-status="Completed">✅ Completed</button>
-            <button class="order-tab" data-status="Cancelled">✖ Cancelled</button>
+            <button class="order-tab" data-status="Awaiting Payment">💳 Awaiting</button>
+            <button class="order-tab" data-status="Completed">✅ Done</button>
+            <button class="order-tab" data-status="Cancelled">✖ Cancel</button>
           </div>
 
-          <input type="search" id="orderSearchInput" class="site-search" placeholder="🔎 Search by order code, name or phone..." style="width:100%; margin: 0.5rem 0 1rem; background:#0f1f33; color:#e2ebf5; border-color:#1f3a57;">
+          <input type="search" id="orderSearchInput" class="site-search" placeholder="🔎 Search orders..." style="width:100%; margin: 0.4rem 0 0.8rem; background:#0f1f33; color:#e2ebf5; border-color:#1f3a57;">
 
           <div id="dashboardOrdersContainer">
-            <p class="no-orders-msg">No orders yet. Customer orders will appear here.</p>
+            <p class="no-orders-msg">No orders yet.</p>
           </div>
         </div>
 
-        <div class="dash-card" style="flex: 1 1 260px;">
-          <h3>Low Stock Alerts</h3>
+        <div class="dash-card">
+          <h3 style="font-size:1.05rem;">Low Stock Alerts</h3>
           <ul>
             <li><span>HP EliteBook 840</span> <span>2 left</span></li>
             <li><span>Gaming PC RTX 3060</span> <span>1 left</span></li>
             <li><span>24" LED Monitor</span> <span>3 left</span></li>
-            <li><span>Wireless Mouse</span> <span>5 left</span></li>
-            <li><span>USB-C Hub</span> <span>4 left</span></li>
           </ul>
-          <button class="action-btn" id="restockBtn">📦 Restock Inventory</button>
+          <button class="action-btn" id="restockBtn">📦 Restock</button>
         </div>
 
-        <div class="dash-card" style="flex: 1 1 220px;">
-          <h3>Quick Actions</h3>
-          <button class="action-btn" id="addProductBtn" style="width:100%; text-align:left; margin-bottom:0.5rem;">➕ Add New Product</button>
-          <button class="action-btn" id="processOrdersBtn" style="width:100%; text-align:left; margin-bottom:0.5rem;">📦 Process Pending Orders</button>
-          <button class="action-btn" id="viewCustomersBtn" style="width:100%; text-align:left; margin-bottom:0.5rem;">👤 View Customer List</button>
-          <button class="action-btn" id="generateReportBtn" style="width:100%; text-align:left;">📊 Generate Sales Report</button>
+        <div class="dash-card">
+          <h3 style="font-size:1.05rem;">Quick Actions</h3>
+          <button class="action-btn" id="addProductBtn" style="width:100%; text-align:left; margin-bottom:0.4rem;">➕ Add New Product</button>
+          <button class="action-btn" id="processOrdersBtn" style="width:100%; text-align:left; margin-bottom:0.4rem;">📦 Process Pending</button>
+          <button class="action-btn" id="viewCustomersBtn" style="width:100%; text-align:left; margin-bottom:0.4rem;">👤 View Customers</button>
+          <button class="action-btn" id="generateReportBtn" style="width:100%; text-align:left;">📊 Sales Report</button>
         </div>
       </div>
     </section>
@@ -1510,16 +1526,16 @@
           <p id="detailDescription"></p>
           <div id="detailSpecs" class="spec-grid"></div>
           <strong id="detailPrice" class="price"></strong>
-          <button id="detailOrder" class="btn primary">Order This Product</button>
+          <button id="detailOrder" class="btn primary full">Order This Product</button>
         </div>
       </div>
     </div>
 
     <div class="modal-overlay hidden" id="adminLoginModal">
-      <div class="customer-modal" style="max-width: 420px;">
+      <div class="customer-modal" style="max-width: 400px;">
         <button class="modal-close" data-close="adminLoginModal">×</button>
         <p class="eyebrow">ADMIN ACCESS</p>
-        <h2 style="margin-bottom: 1rem;">Manager Login</h2>
+        <h2 style="margin-bottom: 1rem; font-size:1.2rem;">Manager Login</h2>
         <form id="adminLoginForm">
           <label>Email
             <input type="email" id="adminEmail" required placeholder="admin@fortoyou.com" autocomplete="username">
@@ -1541,7 +1557,7 @@
       </div>
       <div class="contact-grid">
         <div class="contact-card"><span>📍</span><h3>Location</h3><p>Kampala, Uganda</p><small>Update with the exact shop address.</small></div>
-        <div class="contact-card"><span>📞</span><h3>Phone</h3><p>+256 750899569</p><small>Business contact (Uganda)</small></div>
+        <div class="contact-card"><span>📞</span><h3>Phone</h3><p>+256 750899569</p><small>Business contact</small></div>
         <div class="contact-card"><span>✉</span><h3>Email</h3><p>muyimbadenis2004@gmail.com</p><small>Business email</small></div>
         <div class="contact-card"><span>💬</span><h3>WhatsApp</h3><p>Chat with us</p><a href="https://wa.me/256750899569" target="_blank" rel="noopener">Open WhatsApp →</a></div>
       </div>
@@ -1549,56 +1565,44 @@
 
     <!-- ADD / EDIT PRODUCT MODAL -->
     <div class="modal-overlay hidden" id="productModal">
-      <div class="customer-modal" style="max-width: 560px;">
+      <div class="customer-modal" style="max-width: 520px;">
         <button class="modal-close" data-close="productModal">×</button>
         <p class="eyebrow" id="productModalEyebrow">ADD NEW PRODUCT</p>
-        <h2 id="productModalTitle" style="margin-bottom: 0.8rem;">New Product</h2>
+        <h2 id="productModalTitle" style="margin-bottom: 0.7rem; font-size:1.15rem;">New Product</h2>
         <form id="productForm">
           <input type="hidden" id="productFormId">
-
-          <div class="form-row">
-            <label>Product Name
-              <input id="productFormName" required placeholder="e.g. HP Pavilion 15">
-            </label>
-            <label>Brand
-              <input id="productFormBrand" placeholder="e.g. HP, Dell, Lenovo, Mac">
-            </label>
-          </div>
-
-          <div class="form-row">
-            <label>Category
-              <select id="productFormCategory" required>
-                <option value="">Select category</option>
-                <option value="Student Laptop">Student Laptop</option>
-                <option value="Business Laptop">Business Laptop</option>
-                <option value="Gaming PC">Gaming PC</option>
-                <option value="Office Desktop">Office Desktop</option>
-                <option value="LED Monitor">LED Monitor</option>
-                <option value="Computer Accessories">Computer Accessories</option>
-              </select>
-            </label>
-            <label>Price (UGX)
-              <input type="number" id="productFormPrice" required min="0" placeholder="e.g. 850000">
-            </label>
-          </div>
-
-          <div class="form-row">
-            <label>Stock Quantity
-              <input type="number" id="productFormStock" required min="0" value="0">
-            </label>
-            <label>Low Stock Alert Below
-              <input type="number" id="productFormThreshold" min="0" value="5">
-            </label>
-          </div>
-
+          <label>Product Name
+            <input id="productFormName" required placeholder="e.g. HP Pavilion 15">
+          </label>
+          <label>Brand
+            <input id="productFormBrand" placeholder="e.g. HP, Dell, Lenovo, Mac">
+          </label>
+          <label>Category
+            <select id="productFormCategory" required>
+              <option value="">Select category</option>
+              <option value="Student Laptop">Student Laptop</option>
+              <option value="Business Laptop">Business Laptop</option>
+              <option value="Gaming PC">Gaming PC</option>
+              <option value="Office Desktop">Office Desktop</option>
+              <option value="LED Monitor">LED Monitor</option>
+              <option value="Computer Accessories">Computer Accessories</option>
+            </select>
+          </label>
+          <label>Price (UGX)
+            <input type="number" id="productFormPrice" required min="0" placeholder="e.g. 850000">
+          </label>
+          <label>Stock Quantity
+            <input type="number" id="productFormStock" required min="0" value="0">
+          </label>
+          <label>Low Stock Alert Below
+            <input type="number" id="productFormThreshold" min="0" value="5">
+          </label>
           <label>Image URL (optional)
             <input id="productFormImage" placeholder="https://...">
           </label>
-
           <label>Description (optional)
             <textarea id="productFormDescription" rows="2" placeholder="Short specs or notes"></textarea>
           </label>
-
           <button class="btn primary full" type="submit" id="productFormSubmit" style="margin-top:1rem;">Save Product</button>
           <p id="productFormStatus" class="form-status"></p>
         </form>
@@ -1607,34 +1611,30 @@
 
     <!-- ADJUST STOCK MODAL -->
     <div class="modal-overlay hidden" id="stockAdjustModal">
-      <div class="customer-modal" style="max-width: 460px;">
+      <div class="customer-modal" style="max-width: 420px;">
         <button class="modal-close" data-close="stockAdjustModal">×</button>
         <p class="eyebrow">ADJUST STOCK</p>
-        <h2 id="stockAdjustTitle" style="margin-bottom: 0.5rem;">Product Name</h2>
-        <p style="color:#4b6a8a; margin-bottom: 1rem;">
+        <h2 id="stockAdjustTitle" style="margin-bottom: 0.4rem; font-size:1.1rem;">Product Name</h2>
+        <p style="color:#4b6a8a; margin-bottom: 0.8rem; font-size:0.88rem;">
           Current stock: <strong id="stockAdjustCurrent">0</strong>
         </p>
-
         <label>Operation
           <select id="stockAdjustOp">
-            <option value="add">➕ Add to stock (received new units)</option>
-            <option value="subtract">➖ Subtract from stock (sold/damaged)</option>
+            <option value="add">➕ Add (received new units)</option>
+            <option value="subtract">➖ Subtract (sold/damaged)</option>
             <option value="set">✏️ Set exact new count</option>
           </select>
         </label>
-
         <label>Quantity
           <input type="number" id="stockAdjustQty" min="1" value="1">
         </label>
-
-        <div style="display:flex; gap:0.4rem; flex-wrap:wrap; margin-top:0.6rem;">
+        <div style="display:flex; gap:0.3rem; flex-wrap:wrap; margin-top:0.5rem;">
           <button type="button" class="small-btn" data-quick="1">+1</button>
           <button type="button" class="small-btn" data-quick="5">+5</button>
           <button type="button" class="small-btn" data-quick="10">+10</button>
           <button type="button" class="small-btn" data-quick="20">+20</button>
           <button type="button" class="small-btn" data-quick="50">+50</button>
         </div>
-
         <button class="btn primary full" id="stockAdjustConfirm" style="margin-top:1rem;">Confirm Adjustment</button>
         <p id="stockAdjustStatus" class="form-status"></p>
       </div>
@@ -1644,15 +1644,14 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-main">
-      <div><div class="footer-logo">For To You</div><p>Computers, laptops, gaming systems and accessories in Kampala, Uganda.</p></div>
+      <div><div class="footer-logo">For To You</div><p style="font-size:0.85rem;">Computers, laptops, gaming systems and accessories in Kampala, Uganda.</p></div>
       <div><h4>Quick Links</h4><a href="#products">Products</a><a href="#order">Order Online</a><a href="#questions">Ask a Question</a></div>
       <div><h4>Categories</h4><a href="#products">Laptops</a><a href="#products">Desktops</a><a href="#products">Gaming</a><a href="#products">Accessories</a></div>
-      <div><h4>Business Hours</h4><p>24/7 Open</p></div>
+      <div><h4>Business Hours</h4><p style="font-size:0.85rem;">24/7 Open</p></div>
     </div>
     <div class="copyright">© For To You Computers & Laptops Center. All rights reserved. · <a href="#dashboard" style="color:#aab5c7">Admin Dashboard</a></div>
   </footer>
 
-  <!-- WHATSAPP -->
   <a class="whatsapp" href="https://wa.me/256750899569" target="_blank" rel="noopener" aria-label="WhatsApp">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
@@ -1680,7 +1679,6 @@
       const SUPABASE_ANON_KEY = 'sb_publishable_8-YgmvfL1OI2EYQ4v9oYBw_NGJagbas';
       const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-      // ---------- SAFE HELPERS ----------
       function on(id, event, handler) {
         const el = document.getElementById(id);
         if (el) el.addEventListener(event, handler);
@@ -1694,12 +1692,12 @@
       }
 
       // ============================================================
-      // MOBILE MENU (with close-on-tap, overlay, scroll lock)
+      // MOBILE MENU (close on tap, overlay, scroll lock)
       // ============================================================
       const menuBtn = $('menuBtn');
       const mainNav = $('mainNav');
       const navOverlay = $('navOverlay');
-      const stickyHeaderHeight = () => document.querySelector('.header')?.offsetHeight || 70;
+      const stickyHeaderHeight = () => document.querySelector('.header')?.offsetHeight || 60;
 
       function openMenu() {
         if (!mainNav || !menuBtn) return;
@@ -1709,7 +1707,6 @@
         menuBtn.textContent = '✕';
         document.body.classList.add('menu-open');
       }
-
       function closeMenu() {
         if (!mainNav || !menuBtn) return;
         mainNav.classList.remove('open');
@@ -1718,27 +1715,17 @@
         menuBtn.textContent = '☰';
         document.body.classList.remove('menu-open');
       }
-
       function toggleMenu() {
         if (mainNav?.classList.contains('open')) closeMenu();
         else openMenu();
       }
 
-      // Toggle button
-      on('menuBtn', 'click', function (e) {
-        e.stopPropagation();
-        toggleMenu();
-      });
-
-      // Backdrop click closes menu
+      on('menuBtn', 'click', function (e) { e.stopPropagation(); toggleMenu(); });
       if (navOverlay) navOverlay.addEventListener('click', closeMenu);
-
-      // Escape key closes menu
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && mainNav?.classList.contains('open')) closeMenu();
       });
 
-      // Smooth-scroll helper that respects the sticky header
       function scrollToSection(selector) {
         const target = document.querySelector(selector);
         if (!target) return;
@@ -1747,24 +1734,20 @@
         window.scrollTo({ top, behavior: 'smooth' });
       }
 
-      // Close mobile menu when any nav link is tapped, then smooth-scroll
       document.querySelectorAll('#mainNav a').forEach(link => {
         link.addEventListener('click', function (e) {
           const href = this.getAttribute('href');
           const wasOpen = mainNav?.classList.contains('open');
 
-          // Handle dashboard link separately (JS-driven)
           if (this.id === 'dashboardNavLink') {
             if (wasOpen) closeMenu();
-            return; // let the existing dashboard handler run
+            return;
           }
 
           if (href && href.startsWith('#')) {
             e.preventDefault();
             if (wasOpen) closeMenu();
-            // Small delay lets the close animation finish before scrolling
             setTimeout(() => scrollToSection(href), wasOpen ? 120 : 0);
-            // Update URL hash silently
             if (history.replaceState) history.replaceState(null, '', href);
           } else if (wasOpen) {
             closeMenu();
@@ -1772,7 +1755,6 @@
         });
       });
 
-      // Also close menu if user rotates phone / resizes to desktop
       let resizeTimer;
       window.addEventListener('resize', function () {
         clearTimeout(resizeTimer);
@@ -1781,7 +1763,6 @@
         }, 150);
       });
 
-      // Close menu when the "Order Now" nav CTA is tapped
       on('headerOrderBtn', 'click', function () {
         closeMenu();
         setTimeout(() => scrollToSection('#order'), 100);
@@ -1984,7 +1965,6 @@
         if (e.target === this) this.classList.add('hidden');
       });
 
-      // ---------- ORDER CODE ----------
       function generateOrderCode() {
         return 'ORD-' + Date.now().toString(36).toUpperCase() + Math.random().toString(36).substring(2, 5).toUpperCase();
       }
@@ -2069,8 +2049,8 @@
       // ---------- PAYMENT INSTRUCTIONS ----------
       const paymentInstructions = $('paymentInstructions');
       const PAYMENT_INFO = {
-        'MTN Mobile Money': p => ({ html: `<strong>📱 MTN Mobile Money</strong><p>After submitting, you will receive a payment prompt on <strong>${esc(p) || 'your phone'}</strong>. Approve it to complete your order.</p><div class="inst-detail">Merchant: For To You Computers · Ref: your order code</div>` }),
-        'Airtel Money': p => ({ html: `<strong>📱 Airtel Money</strong><p>After submitting, you will receive a payment prompt on <strong>${esc(p) || 'your phone'}</strong>. Approve it to complete your order.</p><div class="inst-detail">Merchant: For To You Computers · Ref: your order code</div>` }),
+        'MTN Mobile Money': p => ({ html: `<strong>📱 MTN Mobile Money</strong><p>After submitting, you will receive a payment prompt on <strong>${esc(p) || 'your phone'}</strong>. Approve it to complete your order.</p><div class="inst-detail">Merchant: For To You Computers</div>` }),
+        'Airtel Money': p => ({ html: `<strong>📱 Airtel Money</strong><p>After submitting, you will receive a payment prompt on <strong>${esc(p) || 'your phone'}</strong>. Approve it to complete your order.</p><div class="inst-detail">Merchant: For To You Computers</div>` }),
         'Visa / Mastercard': () => ({ html: `<strong>💳 Card Payment</strong><p>After submitting, you will be redirected to our secure card payment page to enter your card details.</p>` }),
         'Bank Transfer': () => ({ html: `<strong>🏦 Bank Transfer</strong><p>Please transfer to the account below and send the receipt via WhatsApp:</p><div class="inst-detail">Bank: Stanbic Bank Uganda<br>Account Name: For To You Computers<br>Account No: 9030 0012 3456 78<br>Branch: Kampala Road</div>` }),
         'Cash on Delivery': () => ({ html: `<strong>💵 Cash on Delivery</strong><p>You will pay <strong>in cash when your order arrives</strong>. Please have the exact amount ready.</p>` })
@@ -2147,13 +2127,11 @@
         loadCustomerOrders();
       });
 
-      // ---------- QUESTION FORM TOGGLE ----------
       on('questionContactType', 'change', function () {
         $('whatsappQuestionField')?.classList.toggle('hidden', this.value !== 'whatsapp');
         $('emailQuestionField')?.classList.toggle('hidden', this.value !== 'email');
       });
 
-      // ---------- SUBMIT QUESTION ----------
       on('questionForm', 'submit', async function (e) {
         e.preventDefault();
         const btn = this.querySelector('button[type="submit"]');
@@ -2188,7 +2166,6 @@
         loadQuestionsForAdmin();
       });
 
-      // ---------- CUSTOMER ACCOUNT ----------
       const ACCOUNT_KEY = 'fortoyou_account';
       const getAccount = () => { try { return JSON.parse(localStorage.getItem(ACCOUNT_KEY)); } catch (e) { return null; } };
       const saveAccount = a => localStorage.setItem(ACCOUNT_KEY, JSON.stringify(a));
@@ -2198,10 +2175,10 @@
         const acc = getAccount();
         const box = $('accountOrders');
         if (!box) return;
-        if (!acc) { box.innerHTML = `<p>Sign in to see your orders.</p>`; return; }
+        if (!acc) { box.innerHTML = `<p style="font-size:0.85rem;">Sign in to see your orders.</p>`; return; }
         const { data } = await supabase.from('orders').select('*').eq('customer_email', acc.email).order('created_at', { ascending: false });
-        if (!data || data.length === 0) { box.innerHTML = `<p>No orders yet.</p>`; return; }
-        box.innerHTML = data.map(o => `<div style="border-bottom:1px solid #e2ebf5;padding:0.5rem 0;"><strong>${esc(o.order_code)}</strong> — ${esc(o.product)}<br><small>${esc(o.status)} · UGX ${(parseInt(o.total_price) || 0).toLocaleString()}</small></div>`).join('');
+        if (!data || data.length === 0) { box.innerHTML = `<p style="font-size:0.85rem;">No orders yet.</p>`; return; }
+        box.innerHTML = data.map(o => `<div style="border-bottom:1px solid #e2ebf5;padding:0.4rem 0;font-size:0.85rem;"><strong>${esc(o.order_code)}</strong> — ${esc(o.product)}<br><small>${esc(o.status)} · UGX ${(parseInt(o.total_price) || 0).toLocaleString()}</small></div>`).join('');
       }
 
       (function () {
@@ -2240,9 +2217,6 @@
         if ($('accountStatus')) $('accountStatus').textContent = 'Logged out.';
         loadCustomerOrders();
       });
-
-      // NOTE: header Order button + nav links are handled earlier in the mobile
-      // menu block, so we don't duplicate the handler here.
 
       // ============================================================
       // DASHBOARD — ORDERS
@@ -2332,7 +2306,7 @@
         }
         dashboardOrdersContainer.innerHTML = `
           <table class="dash-table">
-            <thead><tr><th>Order</th><th>Customer</th><th>Product</th><th>Total</th><th>Payment</th><th>Status</th><th>Actions</th></tr></thead>
+            <thead><tr><th>Order</th><th>Customer</th><th>Product</th><th>Total</th><th>Pay</th><th>Status</th><th>Actions</th></tr></thead>
             <tbody>
               ${list.map(o => {
                 const cls = (o.status === 'Completed' || o.status === 'Paid') ? 'green'
@@ -2342,9 +2316,9 @@
                 return `<tr>
                   <td><strong>${esc(o.order_code)}</strong><br><small style="color:#8ab3d9;">${new Date(o.created_at).toLocaleDateString()}</small></td>
                   <td>${esc(o.customer_name)}<br><small style="color:#8ab3d9;">${esc(o.customer_phone)}</small></td>
-                  <td>${esc(o.product)}<br><small style="color:#8ab3d9;">Qty: ${o.quantity || 1} · ${esc(o.location || '—')}</small></td>
+                  <td>${esc(o.product)}<br><small style="color:#8ab3d9;">Qty: ${o.quantity || 1}</small></td>
                   <td class="total-cell">UGX ${total.toLocaleString()}</td>
-                  <td><span class="pay-badge ${payCls}">${esc(o.payment_method || '—')}</span></td>
+                  <td><span class="pay-badge ${payCls}">${esc((o.payment_method || '—').split(' ')[0])}</span></td>
                   <td><span class="status-badge ${cls}">${esc(o.status)}</span></td>
                   <td class="order-row-actions">
                     <button data-action="complete" data-id="${o.id}" title="Mark completed">✔</button>
@@ -2431,7 +2405,7 @@
         const outCount = allProducts.filter(p => p.stock === 0).length;
         if (dashLowStockBreakdown) {
           dashLowStockBreakdown.textContent =
-            lowCount + ' low stock' + (outCount ? ' · ' + outCount + ' out of stock' : '');
+            lowCount + ' low stock' + (outCount ? ' · ' + outCount + ' out' : '');
         }
       }
 
@@ -2444,7 +2418,7 @@
           .sort((a, b) => a.stock - b.stock);
 
         if (lowItems.length === 0) {
-          ul.innerHTML = `<li style="justify-content:center; color:#7ad9a0;">✅ All stock levels healthy</li>`;
+          ul.innerHTML = `<li style="justify-content:center; color:#7ad9a0; font-size:0.85rem;">✅ All stock levels healthy</li>`;
           return;
         }
 
@@ -2482,7 +2456,7 @@
         }
 
         if (list.length === 0) {
-          inventoryContainer.innerHTML = '<p class="no-orders-msg">No products match this filter. Click "➕ Add New Product" to add stock.</p>';
+          inventoryContainer.innerHTML = '<p class="no-orders-msg">No products match this filter. Click "➕ Add" to add stock.</p>';
           return;
         }
 
@@ -2490,9 +2464,8 @@
           <table class="inventory-table">
             <thead>
               <tr>
-                <th style="width:52px;"></th>
+                <th style="width:44px;"></th>
                 <th>Product</th>
-                <th>Category</th>
                 <th>Price</th>
                 <th>Stock</th>
                 <th>Actions</th>
@@ -2506,14 +2479,13 @@
                     <div class="inv-brand">${esc(p.brand || '—')}</div>
                     <div class="inv-name">${esc(p.name)}</div>
                   </td>
-                  <td style="font-size:0.85rem; color:#b0c9e2;">${esc(p.category)}</td>
                   <td class="inv-price">UGX ${(parseInt(p.price) || 0).toLocaleString()}</td>
-                  <td><span class="stock-pill ${stockPillClass(p.stock, p.low_stock_threshold)}">${p.stock} in stock</span></td>
+                  <td><span class="stock-pill ${stockPillClass(p.stock, p.low_stock_threshold)}">${p.stock}</span></td>
                   <td>
                     <div class="inv-actions">
-                      <button class="success" data-inv-action="add" data-id="${p.id}">➕ Add</button>
-                      <button data-inv-action="adjust" data-id="${p.id}">✏️ Adjust</button>
-                      <button data-inv-action="edit" data-id="${p.id}">📝 Edit</button>
+                      <button class="success" data-inv-action="add" data-id="${p.id}">➕</button>
+                      <button data-inv-action="adjust" data-id="${p.id}">✏️</button>
+                      <button data-inv-action="edit" data-id="${p.id}">📝</button>
                       <button class="danger" data-inv-action="delete" data-id="${p.id}">🗑</button>
                     </div>
                   </td>
@@ -2548,10 +2520,9 @@
       on('refreshInventoryBtn', 'click', async function () {
         this.textContent = '⏳';
         await loadInventory();
-        this.textContent = '🔄 Refresh';
+        this.textContent = '🔄';
       });
 
-      // ---------- ADD / EDIT PRODUCT MODAL ----------
       const productModal = $('productModal');
 
       function openProductModal(product) {
@@ -2612,7 +2583,6 @@
         setTimeout(() => { productModal.classList.add('hidden'); loadInventory(); }, 700);
       });
 
-      // ---------- STOCK ADJUST MODAL ----------
       const stockAdjustModal = $('stockAdjustModal');
       let currentStockProductId = null;
 
@@ -2688,9 +2658,8 @@
         loadInventory();
       });
 
-      // ---------- DASHBOARD BUTTONS ----------
       on('refreshOrdersBtn', 'click', async function () {
-        this.textContent = '⏳'; await loadDashboard(); this.textContent = '🔄 Refresh';
+        this.textContent = '⏳'; await loadDashboard(); this.textContent = '🔄';
       });
       on('clearOrdersBtn', 'click', async function () {
         if (!confirm('Delete ALL orders?')) return;
@@ -2721,7 +2690,6 @@
           '\nSales: UGX ' + total.toLocaleString());
       });
 
-      // ---------- DASHBOARD — QUESTIONS ----------
       const dashboardQuestionsContainer = $('dashboardQuestionsContainer');
       let allQuestions = [];
       let questionFilter = 'all';
@@ -2747,20 +2715,20 @@
           const cleanPhone = (q.contact || '').replace(/[^0-9]/g, '');
           const waLink = isWA && cleanPhone ? `https://wa.me/${cleanPhone}?text=${encodeURIComponent('Hello ' + q.name + ', reply: ')}` : null;
           const mailLink = q.contact_type === 'email' ? `mailto:${q.contact}?subject=Reply%20—%20For%20To%20You&body=Hello%20${encodeURIComponent(q.name)}%2C%0A%0AReply%3A%0A` : null;
-          return `<div style="border:1px solid #1f3a57;border-radius:20px;padding:1rem;margin-bottom:1rem;background:#0f1f33;">
-            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.5rem;">
-              <div style="flex:1 1 300px;">
-                <div style="color:#8ab3d9;font-size:0.8rem;">${new Date(q.created_at).toLocaleString()} · ${esc(q.name)}</div>
-                <div style="color:#fff;font-size:1.05rem;margin:0.5rem 0;">"${esc(q.question)}"</div>
-                <div style="color:#8ab3d9;font-size:0.85rem;">${isWA ? '📱' : '✉️'} ${esc(q.contact)}</div>
+          return `<div style="border:1px solid #1f3a57;border-radius:16px;padding:0.8rem;margin-bottom:0.8rem;background:#0f1f33;">
+            <div style="display:flex;justify-content:space-between;flex-wrap:wrap;gap:0.4rem;">
+              <div style="flex:1 1 200px;">
+                <div style="color:#8ab3d9;font-size:0.72rem;">${new Date(q.created_at).toLocaleString()} · ${esc(q.name)}</div>
+                <div style="color:#fff;font-size:0.92rem;margin:0.4rem 0;">"${esc(q.question)}"</div>
+                <div style="color:#8ab3d9;font-size:0.78rem;">${isWA ? '📱' : '✉️'} ${esc(q.contact)}</div>
               </div>
               <div>${q.status === 'answered' ? '<span class="status-badge green">Answered</span>' : '<span class="status-badge orange">Unanswered</span>'}</div>
             </div>
-            <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;">
-              ${waLink ? `<a href="${waLink}" target="_blank" class="action-btn" style="background:#25D366;text-decoration:none;">📱 WhatsApp</a>` : ''}
+            <div style="margin-top:0.7rem;display:flex;flex-wrap:wrap;gap:0.3rem;">
+              ${waLink ? `<a href="${waLink}" target="_blank" class="action-btn" style="background:#25D366;text-decoration:none;">📱 WA</a>` : ''}
               ${mailLink ? `<a href="${mailLink}" class="action-btn" style="background:#1d4e7a;text-decoration:none;">✉️ Email</a>` : ''}
-              ${q.status !== 'answered' ? `<button class="action-btn" data-mark="${q.id}" style="background:#1d7a4e;">✅ Answered</button>` : ''}
-              <button class="action-btn" data-del="${q.id}" style="background:#a83232;">🗑 Delete</button>
+              ${q.status !== 'answered' ? `<button class="action-btn" data-mark="${q.id}" style="background:#1d7a4e;">✅ Answer</button>` : ''}
+              <button class="action-btn" data-del="${q.id}" style="background:#a83232;">🗑</button>
             </div>
           </div>`;
         }).join('');
@@ -2777,12 +2745,11 @@
       }
 
       on('refreshQuestionsBtn', 'click', async function () {
-        this.textContent = '⏳'; await loadQuestionsForAdmin(); this.textContent = '🔄 Refresh';
+        this.textContent = '⏳'; await loadQuestionsForAdmin(); this.textContent = '🔄';
       });
       on('filterUnansweredBtn', 'click', () => { questionFilter = 'unanswered'; renderQuestionsList(); });
       on('filterAllQuestionsBtn', 'click', () => { questionFilter = 'all'; renderQuestionsList(); });
 
-      // ---------- ADMIN AUTH ----------
       const adminLoginModal = $('adminLoginModal');
       const adminLoginForm = $('adminLoginForm');
       const adminLoginStatus = $('adminLoginStatus');
@@ -2797,7 +2764,6 @@
       }
       checkAdminSession();
 
-      // Dashboard link handler — closes mobile menu first, then shows modal / dashboard
       on('dashboardNavLink', 'click', async function (e) {
         e.preventDefault();
         closeMenu();
@@ -2858,7 +2824,6 @@
         alert('✅ Logged out.');
       });
 
-      // ---------- REAL-TIME ----------
       try {
         supabase.channel('dashboard-realtime')
           .on('postgres_changes', { event: '*', schema: 'public', table: 'orders' }, () => loadDashboard())
@@ -2866,7 +2831,6 @@
           .subscribe();
       } catch (e) { console.warn('Realtime subscription failed:', e); }
 
-      // ---------- INITIAL LOAD ----------
       loadDashboard();
       loadCustomerOrders();
       updateOrderTotal();
