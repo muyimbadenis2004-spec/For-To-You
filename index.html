@@ -102,6 +102,55 @@
       opacity: 1; pointer-events: auto;
     }
 
+    /* ---------- FLOATING MOBILE QUICK-NAV ---------- */
+    .mobile-quicknav {
+      position: fixed;
+      left: 0.9rem;
+      bottom: 0.9rem;
+      display: none;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 60;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
+    .mobile-quicknav.hidden-by-drawer {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateX(-20px);
+    }
+    .quicknav-btn {
+      background: #1d4e7a;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 0.55rem 1rem 0.55rem 0.85rem;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(29, 78, 122, 0.35);
+      transition: all 0.25s ease;
+      font-family: inherit;
+    }
+    .quicknav-btn:hover,
+    .quicknav-btn:active {
+      background: #0f3a5c;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(29, 78, 122, 0.45);
+    }
+    .quicknav-btn .quicknav-icon {
+      font-size: 1rem;
+      line-height: 1;
+    }
+    .quicknav-btn .quicknav-label {
+      font-size: 0.82rem;
+    }
+    .quicknav-btn.hidden {
+      display: none;
+    }
+
     /* ----- HERO ----- */
     .hero {
       display: flex; flex-wrap: wrap; align-items: center;
@@ -947,6 +996,13 @@
 
       .section { padding: 1.5rem 0.9rem; }
       .order-section, .questions { padding: 1.2rem 0.9rem; }
+
+      /* Show floating quick-nav on mobile */
+      .mobile-quicknav { display: flex; }
+      /* Move WhatsApp up so quick-nav sits below it */
+      .whatsapp {
+        bottom: 4.5rem;
+      }
     }
 
     @media (max-width: 480px) {
@@ -1002,7 +1058,20 @@
     <button class="nav-cta" id="headerOrderBtn">Order Now</button>
   </header>
 
+  <!-- Mobile nav backdrop overlay -->
   <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- FLOATING MOBILE QUICK-NAV (mobile only) -->
+  <div class="mobile-quicknav" id="mobileQuickNav">
+    <button class="quicknav-btn" id="quickNavMenuBtn" aria-label="Open menu">
+      <span class="quicknav-icon">☰</span>
+      <span class="quicknav-label">Menu</span>
+    </button>
+    <button class="quicknav-btn hidden" id="quickNavTopBtn" aria-label="Back to top">
+      <span class="quicknav-icon">⬆</span>
+      <span class="quicknav-label">Top</span>
+    </button>
+  </div>
 
   <main>
     <!-- HERO -->
@@ -1692,11 +1761,14 @@
       }
 
       // ============================================================
-      // MOBILE MENU (close on tap, overlay, scroll lock)
+      // MOBILE MENU (close on tap, overlay, scroll lock, quick-nav)
       // ============================================================
       const menuBtn = $('menuBtn');
       const mainNav = $('mainNav');
       const navOverlay = $('navOverlay');
+      const mobileQuickNav = $('mobileQuickNav');
+      const quickNavMenuBtn = $('quickNavMenuBtn');
+      const quickNavTopBtn = $('quickNavTopBtn');
       const stickyHeaderHeight = () => document.querySelector('.header')?.offsetHeight || 60;
 
       function openMenu() {
@@ -1706,6 +1778,7 @@
         menuBtn.setAttribute('aria-expanded', 'true');
         menuBtn.textContent = '✕';
         document.body.classList.add('menu-open');
+        mobileQuickNav?.classList.add('hidden-by-drawer');
       }
       function closeMenu() {
         if (!mainNav || !menuBtn) return;
@@ -1714,6 +1787,7 @@
         menuBtn.setAttribute('aria-expanded', 'false');
         menuBtn.textContent = '☰';
         document.body.classList.remove('menu-open');
+        mobileQuickNav?.classList.remove('hidden-by-drawer');
       }
       function toggleMenu() {
         if (mainNav?.classList.contains('open')) closeMenu();
@@ -1722,6 +1796,26 @@
 
       on('menuBtn', 'click', function (e) { e.stopPropagation(); toggleMenu(); });
       if (navOverlay) navOverlay.addEventListener('click', closeMenu);
+
+      // Floating quick-nav: open menu
+      on('quickNavMenuBtn', 'click', function (e) {
+        e.stopPropagation();
+        openMenu();
+      });
+
+      // Floating quick-nav: back to top
+      on('quickNavTopBtn', 'click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // Show/hide "Top" button based on scroll
+      window.addEventListener('scroll', function () {
+        if (quickNavTopBtn) {
+          if (window.scrollY > 400) quickNavTopBtn.classList.remove('hidden');
+          else quickNavTopBtn.classList.add('hidden');
+        }
+      }, { passive: true });
+
       document.addEventListener('keydown', function (e) {
         if (e.key === 'Escape' && mainNav?.classList.contains('open')) closeMenu();
       });
